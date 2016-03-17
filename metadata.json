@@ -84,7 +84,7 @@
 		},
 		"font3": {
 			"font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
-			"font-size": "22px",
+			"font-size": "24px",
 			"font-weight": "400",
 			"line-height": "34px",
 			"color": "@color-swatch4",
@@ -92,7 +92,7 @@
 		},
 		"font4": {
 			"font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
-			"font-size": "24px",
+			"font-size": "20px",
 			"font-weight": "400",
 			"line-height": "28px",
 			"color": "@color-swatch4",
