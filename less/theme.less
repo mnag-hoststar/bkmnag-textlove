@@ -1,0 +1,390 @@
+// ------------------------------------
+// BaseKit Standard Theme: LESS > Theme
+// ------------------------------------
+
+
+// -----------------------------
+// #Table of Contents
+// -----------------------------
+
+
+// 1. #TYPOGRAPHY
+// 2. #CUSTOM PAGE
+// 3. #HEADER
+// 4. #FOOTER
+
+
+
+// -----------------------------
+// 1. #TYPOGRAPHY
+// -----------------------------
+
+
+// Colour Swatches
+// ---------------
+
+// @color-swatch1: Background
+// @color-swatch2: Contrast
+// @color-swatch3: Buttons
+// @color-swatch4: Headings
+// @color-swatch5: Paragraph
+// @color-swatch6: Navigation Links
+// @color-swatch7: Spare
+
+
+// Colour Variables
+// ----------------
+
+@bg-color: @color-swatch1;          // Background
+@contrast-color: @color-swatch2;    // Contrast Colour
+@button-color: @color-swatch3;      // Button BG Colour
+@heading-color: @color-swatch4;     // Heading Text Colour (H1 - H4)
+@paragraph-color: @color-swatch5;   // Paragraph Text Colour
+@nav-color: @color-swatch6;         // Nav Link Colour
+@spare-color: @color-swatch7;       // Spare Colour
+
+
+// Font Swatches
+// -------------
+
+// font1:  Heading 1
+// font2:  Heading 2
+// font3:  Heading 3
+// font4:  Heading 4
+// font5:  Paragraph
+// font6:  Navigation Link
+// font7:  Buttons
+// font8:  Feature Headline
+// font9:  Feature Strapline
+// font10: Company Name (Logo)
+
+
+body {
+	font-smooth: always;
+	font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: geometricPrecision;
+	letter-spacing: .04em;
+}
+
+
+h1, h2, h3, h4, h5 {
+	text-transform: uppercase;
+	letter-spacing: .1em;
+	padding-bottom: .5em;
+}
+
+
+h5 {
+	font-family: @font-swatch4-font-family;
+	font-size: @font-swatch5-font-size;
+	font-weight: @font-swatch5-font-weight;
+	line-height: @font-swatch5-line-height;
+	color: @font-swatch4-color;
+	letter-spacing: @font-swatch4-letter-spacing;
+}
+
+blockquote {
+	border: 1px solid @contrast-color;
+	padding: 30px;
+	font-style: italic;
+	&:before {
+		display: none;
+	}
+}
+
+.content .bk-content-text ol {
+	list-style-position: inherit;
+}
+
+
+
+// -----------------------------
+// 2. #CUSTOM PAGE
+// -----------------------------
+
+
+body.edit .widget.navigation, body.edit .widget.extendednavigation {
+	overflow: visible;
+}
+
+
+
+// -----------------------------
+// 3. #HEADER & #BK-NAV
+// -----------------------------
+
+
+.bk-header {
+	background-color: @color-swatch7;
+	padding: 30px;
+	@media @tablet {
+		padding: 0;
+	}
+	.wrapper {
+	// Flex parent
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-direction: normal;
+	-moz-box-direction: normal;
+	-webkit-box-orient: horizontal;
+	-moz-box-orient: horizontal;
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	-webkit-flex-wrap: nowrap;
+	-ms-flex-wrap: nowrap;
+	flex-wrap: nowrap;
+	-webkit-box-pack: justify;
+	-moz-box-pack: justify;
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-webkit-align-content: flex-start;
+	-ms-flex-line-pack: start;
+	align-content: flex-start;
+	-webkit-box-align: center;
+	-moz-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	@media @tablet {
+		display: block;
+		padding: 30px 0 20px;
+	}
+	.companyheader {
+		// Flex child
+		-webkit-box-ordinal-group: 1;
+		-moz-box-ordinal-group: 1;
+		-webkit-order: 0;
+		-ms-flex-order: 0;
+		order: 0;
+		-webkit-box-flex: 0;
+		-moz-box-flex: 0;
+		-webkit-flex: 0 1 auto;
+		-ms-flex: 0 1 auto;
+		flex: 0 1 auto;
+		-webkit-align-self: auto;
+		-ms-flex-item-align: auto;
+		align-self: auto;
+		min-width: 30%;
+			@media @mobile {
+				display: block;
+			}
+			@media @tablet {
+				padding-right: 40px;
+			}
+		}
+		.extendednavigation {
+			// Flex child
+			-webkit-box-ordinal-group: 1;
+			-moz-box-ordinal-group: 1;
+			-webkit-order: 0;
+			-ms-flex-order: 0;
+			order: 0;
+			-webkit-box-flex: 1;
+			-moz-box-flex: 1;
+			-webkit-flex: 1 1 auto;
+			-ms-flex: 1 1 auto;
+			flex: 1 1 auto;
+			-webkit-align-self: auto;
+			-ms-flex-item-align: auto;
+			align-self: auto;
+		}
+	}
+}
+
+
+
+// -----------------------------
+// 4. #FOOTER
+// -----------------------------
+
+.bk-footer {
+	background-color: @spare-color;
+	color: lighten(@paragraph-color, 10%);
+	padding: 2em 0;
+	.widget.profile {
+		.bk-profile-socialicons {
+			margin: 0;
+		}
+	}
+}
+
+.footerright, .footerleft {
+	display: inline-block;
+	vertical-align: middle;
+	width: 49.5%;
+	@media @mobile {
+		width: 100%;
+		text-align: center !important;
+	}
+}
+
+.footerright {
+	text-align: right;
+}
+
+.bk-footer h1,
+.bk-footer h2,
+.bk-footer h3,
+.bk-footer h4 {
+	color: @nav-color;
+	padding-bottom: 1em;
+}
+
+
+// -----------------------------
+// 5. #CONTENT
+// -----------------------------
+
+.widget.content {
+	padding: 0;
+	overflow: hidden;
+}
+
+.widget.content span.expand {
+	font-family: @font-swatch7-font-family;
+	margin: 10px 0;
+	cursor: pointer;
+	display: inline-block;
+	letter-spacing: .1em;
+	text-transform: uppercase;
+}
+
+.expand .more, .expand .less {
+	&:hover {
+		color: @heading-color;
+	}
+}
+
+
+
+// -----------------------------
+// 6. #GENERAL FORMS
+// -----------------------------
+
+input,
+textarea,
+select,
+.widget.profile form fieldset input {
+	background: @bg-color;
+	text-indent: 10px;
+	padding: 8px;
+	border: 1px solid @contrast-color;
+	margin-bottom: 1em;
+	.transition (all, 0.5s, ease);
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	&:focus,
+	&:hover {
+		.transition (all, 0.5s, ease);
+		border: 1px solid darken(@contrast-color, 20%);
+	}
+}
+
+input, select {
+	height: 52px;
+}
+
+textarea {
+	height: 104px;
+}
+
+label {
+	display: inline-block;
+	padding-bottom: .4em;
+}
+
+select {
+	cursor: pointer;
+	position: relative;
+	border-radius: 0;
+	background: image('/images/arrow-small-down.svg') no-repeat 98% center;
+	background-size: 24px;
+}
+
+
+
+/* ===============================
+   ECOM
+   =============================== */
+
+
+
+
+// Basket Summary
+.basket-summary-items-table {
+	border-collapse: collapse;
+	width: 100%;
+	.image-wrap {
+		background-position: 10000px;
+		line-height: 0;
+		text-align: center;
+		padding: 30px;
+		img {
+			max-width: 100%;
+			max-height: 200px;
+		}
+	}
+	td {
+		padding: 10px 0;
+	}
+	tr {
+		border-bottom: solid 1px darken(@color-swatch1, 10%);
+		&:last-of-type {
+			border-bottom: none;
+		}
+	}
+	.basket-summary-subtotal {
+		padding: 20px;
+	}
+}
+
+.basket-summary-amount,
+.basket-summary-subtotal {
+	text-align: center;
+}
+
+.basket-summary-quantitybtn {
+	button.btn {
+		padding: 7px 18px;
+	}
+}
+
+.basket-summary-items-column {
+	width: 30%;
+}
+
+.quantity-number {
+	display: inline-block;
+	min-width: 40px;
+	text-align: center;
+}
+
+
+
+
+
+// Clearfix
+// --------
+
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+.clearfix {
+	*zoom: 1;
+}
