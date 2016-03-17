@@ -3,18 +3,14 @@
 {% block content %}
 
 
- <header class="bk-header">
-	<div class="wrapper clearfix">
-        <div class="companyheader clearfix">
-		{{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
-		{{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+<header class="bk-header">
+	<div class="wrapper container clearfix">
+		<div class="companyheader clearfix">
+			{{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+			{{widget('companyname', 'companyname', {"business": "profile"})|raw}}
 		</div>
-         <nav class="bk-nav">
-			<div class="clearfix">
-			{{widget('extendednavigation', 'navigationheader', {"align":"right"})|raw}}
-			</div>
-		</nav>  
-    </div>
+		{{widget('extendednavigation', 'navigationheader', {"align":"right"})|raw}}
+	</div>
 </header>
 
 
