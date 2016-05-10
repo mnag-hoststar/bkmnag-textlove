@@ -67,6 +67,11 @@ body {
 	-webkit-font-smoothing: antialiased;
 	text-rendering: geometricPrecision;
 	letter-spacing: .02em;
+	background-color: transparent;
+	background-attachment: fixed;
+	background-image: image('/images/main-bg.jpg');
+	background-size: cover;
+	background-position: center center;
 }
 
 
@@ -124,7 +129,7 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 	top: 0;
 	left: 0;
 	right: 0;
-	z-index: 999;
+	z-index: 9999;
 	@media @tablet {
 		display: block;
 	}
