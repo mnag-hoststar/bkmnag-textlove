@@ -72,7 +72,7 @@
 	vertical-align: middle;
 	z-index: 1000;
 	a img {
-		max-height: 75px;
+		max-height: 40px;
 		width: auto!important;
 	}
 	@media @tablet {
@@ -97,6 +97,9 @@
 .widget {
 	&.extendednavigation {
 		text-transform: uppercase;
+		display: inline-block;
+		vertical-align: middle;
+		width: 70%;
 		@media @tablet {
 			display: block;
 			width: 100%;
@@ -127,7 +130,10 @@
 
 
 .widget.feature {
+	background-color: @spare-color;
 	.feature-bgimg {
+		height: 100%;
+		height: 100vh;
 		.content {
 			text-align: center;
 			.spare {
@@ -143,13 +149,8 @@
 				.feature-btn {
 					display: block;
 					button {
-						padding: 12px 30px;
-						border: 2px solid @bg-color;
-						background-color: transparent;
-						color: @bg-color;
+						padding: 5px 30px;
 						text-decoration: none;
-						text-transform: uppercase;
-						letter-spacing: .1em;
 						.transition (all, 0.5s, ease);
 						&:hover {
 							background-color: @spare-color;

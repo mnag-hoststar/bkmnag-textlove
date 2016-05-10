@@ -67,15 +67,15 @@
 	"fontSwatch": {
 	   "title": "Montserrat",
 		"font1": {
-			"font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
+			"font-family": "\"Josefin Sans\", \"Raleway\", \"Lucida Grande\", Helvetica, sans-serif",
 			"font-size": "36px",
-			"font-weight": "700",
+			"font-weight": "400",
 			"line-height": "52px",
 			"color": "@color-swatch4",
 			"letter-spacing": "inherit"
 		},
 		"font2": {
-			"font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
+			"font-family": "\"Josefin Sans\", \"Raleway\", \"Lucida Grande\", Helvetica, sans-serif",
 			"font-size": "28px",
 			"font-weight": "400",
 			"line-height": "38px",
@@ -83,7 +83,7 @@
 			"letter-spacing": "inherit"
 		},
 		"font3": {
-			"font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
+			"font-family": "\"Josefin Sans\", \"Raleway\", \"Lucida Grande\", Helvetica, sans-serif",
 			"font-size": "24px",
 			"font-weight": "400",
 			"line-height": "34px",
@@ -91,7 +91,7 @@
 			"letter-spacing": "inherit"
 		},
 		"font4": {
-			"font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
+			"font-family": "\"Josefin Sans\", \"Raleway\", \"Lucida Grande\", Helvetica, sans-serif",
 			"font-size": "20px",
 			"font-weight": "400",
 			"line-height": "28px",
@@ -107,7 +107,7 @@
 			"letter-spacing": "inherit"
 		},
 		"font6": {
-			"font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
+			"font-family": "\"Josefin Sans\", \"Raleway\", \"Lucida Grande\", Helvetica, sans-serif",
 			"font-size": "15px",
 			"font-weight": "700",
 			"line-height": "28px",
@@ -118,7 +118,7 @@
 			"background-color-hover": "transparent"
 		},
 		"font7": {
-			"font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
+			"font-family": "\"Josefin Sans\", \"Raleway\", \"Lucida Grande\", Helvetica, sans-serif",
 			"font-size": "13px",
 			"font-weight": "700",
 			"line-height": "33px",
@@ -128,7 +128,7 @@
 			"background-color-hover": "@color-swatch3"
 		},
 		"font8": {
-			"font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
+			"font-family": "\"Josefin Sans\", \"Raleway\", \"Lucida Grande\", Helvetica, sans-serif",
 			"font-size": "67px",
 			"font-weight": "400",
 			"line-height": "80px",
@@ -144,7 +144,7 @@
 			"letter-spacing": "inherit"
 		},
 		"font10": {
-			"font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
+			"font-family": "\"Josefin Sans\", \"Raleway\", \"Lucida Grande\", Helvetica, sans-serif",
 			"font-size": "20px",
 			"font-weight": "700",
 			"line-height": "40px",
