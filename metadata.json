@@ -9,6 +9,7 @@
 	},
 	"images": [
 		"images/feature-bg.png",
+		"images/main-bg.jpg",
 		"images/gallery/1.jpg",
 		"images/gallery/2.jpg",
 		"images/gallery/3.jpg",
@@ -28,7 +29,7 @@
 			"color7":"#ffffff"
 		},
 		"Swatch 2": {
-			"color1":"#f2f2f2",
+			"color1":"#f2f3f5",
 			"color2":"#3b454d",
 			"color3":"#0f797c",
 			"color4":"#3b454d",
@@ -37,7 +38,7 @@
 			"color7":"#ffffff"
 		},
 		"Swatch 3": {
-			"color1":"#f2f2f2",
+			"color1":"#f2f3f5",
 			"color2":"#1d3e4b",
 			"color3":"#dc3a44",
 			"color4":"#5fbcc8",
@@ -46,7 +47,7 @@
 			"color7":"#ffffff"
 		},
 		"Swatch 4": {
-			"color1":"#f2f2f2",
+			"color1":"#f2f3f5",
 			"color2":"#6d2e55",
 			"color3":"#ed5b6a",
 			"color4":"#532b55",
@@ -55,7 +56,7 @@
 			"color7":"#ffffff"
 		},
 		"Swatch 5": {
-			"color1":"#f2f2f2",
+			"color1":"#f2f3f5",
 			"color2":"#071834",
 			"color3":"#4eaaa4",
 			"color4":"#1d3e4b",
