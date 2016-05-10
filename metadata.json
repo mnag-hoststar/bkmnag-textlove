@@ -120,9 +120,9 @@
 		},
 		"font7": {
 			"font-family": "\"Josefin Sans\", \"Raleway\", \"Lucida Grande\", Helvetica, sans-serif",
-			"font-size": "13px",
+			"font-size": "15px",
 			"font-weight": "700",
-			"line-height": "33px",
+			"line-height": "19px",
 			"color": "@color-swatch7",
 			"letter-spacing": "inherit",
 			"background-color": "@color-swatch3",

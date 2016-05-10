@@ -92,7 +92,7 @@ h5 {
 }
 
 blockquote {
-	border: 1px solid @contrast-color;
+	border: 1px solid @button-color;
 	padding: 30px;
 	font-style: italic;
 	&:before {
@@ -125,21 +125,32 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 .bk-header {
 	background-color: @color-swatch7;
 	padding: 30px;
-	position: fixed;
+	position: absolute;
 	top: 0;
 	left: 0;
 	right: 0;
 	z-index: 9999;
 	@media @tablet {
 		display: block;
+		padding: 20px;
 	}
 	.companyheader {
 		display: inline-block;
 		vertical-align: middle;
 		width: 29%;
-		@media @mobile {
+		@media @tablet {
 			display: block;
+			width: 90%;
 		}
+	}
+}
+
+.bk-pt-default {
+	.bk-header {
+		position: relative;
+	}
+	.main {
+		padding: 60px 0;
 	}
 }
 
