@@ -145,6 +145,64 @@
 	}
 }
 
+// Responsive - Extended Navigation
+// --------------------------------
+
+@media @tablet {
+
+	.widget .extendednavigation a.pull {
+		top: -48px;
+		&:after {
+			top: 10px;
+			left: 0;
+			height: 2px;
+			width: 30px;
+			background-color: @font-swatch6-color;
+			box-shadow: 0 9px 0 @font-swatch6-color, 0 18px 0 @font-swatch6-color;
+		}
+	}
+
+	.widget .extendednavigation ul {
+		width: 100%;
+		display: none;
+		margin: 0;
+		padding: 20px;
+	}
+
+	.widget.extendednavigation ul li {
+		border-bottom: 1px solid fade(@color-swatch6, 10%);
+		width: 100%;
+		padding: 0;
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+
+	.widget .extendednavigation ul li.folder ul li {
+		margin: 0;
+		padding: 0;
+	}
+
+	.widget.extendednavigation ul li > ul {
+		display: none!important;
+		left: 0;
+	}
+
+	.widget.extendednavigation ul li:hover > ul {
+		display: block !important;
+		width: 100%;
+		position: relative;
+		z-index: 500;
+		padding: 0;
+	}
+	
+}
+
+
+
+
+
+
 // -----------------------------
 // 4.  #FEATURE
 // -----------------------------
