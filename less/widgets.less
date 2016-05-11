@@ -209,6 +209,7 @@
 
 
 .widget.feature {
+	border-bottom: 1px solid @spare-color;
 	.feature-bgimg {
 		height: 100% !important;
 		height: 100vh !important;
@@ -421,18 +422,20 @@
 				bottom: 10px;
 				.title {
 					margin-top: 30%;
-					color: @font-swatch4-color;
+					color: @spare-color;
 					font-family: @font-swatch4-font-family;
+					font-weight: 700;
 					text-transform: uppercase;
 				}
 				.description {
-					color: @font-swatch5-color;
+					color: @spare-color;
+					font-size: 13px;
 				}
 			}
 		}
 	}
 	.image-data {
-		background: fade(@color-swatch2, 90%);
+		background: fade(@color-swatch3, 85%);
 		display: block;
 		-webkit-transform: scale(0.1);
 		-moz-transform: scale(0.1);
@@ -445,13 +448,14 @@
 		transition: all 0.26s ease-in-out;
 		opacity: 0;
 		position: absolute;
-		left: 14px;
-		right: 14px;
-		top: 14px;
-		bottom: 14px;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
 		height: auto;
 		overflow: hidden;
 		text-align: center;
+		padding: 20px;
 	}
 	.inner:hover .image-data {
 		-webkit-transform: scale(1);
@@ -582,6 +586,7 @@ button.btn,
 	padding: 10px 30px 7px;
 	text-transform: uppercase;
 	letter-spacing: .1em;
+	border: none;
 	.transition (all, 0.5s, ease);
 	&:hover {
 		background-color: @font-swatch7-background-color-hover;
@@ -741,7 +746,7 @@ button.btn,
 			letter-spacing: @font-swatch5-letter-spacing;
 		}
 		input {
-			height: 52px;
+			height: 40px;
 			width: 100%;
 			margin-bottom: 0;
 		}
@@ -767,42 +772,19 @@ button.btn,
 		display: inline-block;
 		a {
 			background-size: 32px;
-			background-color: transparent;
-			border: 2px solid @spare-color;
+			background-color: @font-swatch7-background-color;
+			border: none;
 			margin: 0 5px;
 			width: 36px;
 			height: 36px;
 			.border-radius(50%);
 			.transition (all, 0.5s, ease);
 			&:hover {
-				background-color: @button-color;
+				background-color: @font-swatch7-background-color-hover;
 				.transition (all, 0.5s, ease);
 			}
 			@media @mobile {
 				margin: 0 2px;
-			}
-		}
-	}
-}
-
-// Nav Bar Icons
-// -------------
-
-.bk-nav {
-	.widget.profile {
-		position: absolute;
-		right: 30px;
-		top: 50%;
-		transform: translate(0, -50%);
-		.bk-profile-socialicons {
-			span {
-				a {
-					background-color: transparent;
-					border: none;
-					&:hover {
-						background-color: fade(@color-swatch3, 20%);
-					}
-				}
 			}
 		}
 	}
@@ -814,33 +796,45 @@ button.btn,
 
 .svg .widget.socialicons span.bk-socialicons-twitter a,
 .svg .widget.profile .bk-profile-socialicons span.bk-socialicons-twitter a {
-	background-image: image('/images/social/socialicons-twitter-hover.svg');
+	background-image: image('/images/social/socialicons-twitter.svg');
 }
 
 .svg .widget.socialicons span.bk-socialicons-linkedin a,
 .svg .widget.profile .bk-profile-socialicons span.bk-socialicons-linkedin a {
-	background-image: image('/images/social/socialicons-linkedin-hover.svg');
+	background-image: image('/images/social/socialicons-linkedin.svg');
 }
 
 .svg .widget.socialicons span.bk-socialicons-facebook a,
 .svg .widget.profile .bk-profile-socialicons span.bk-socialicons-facebook a {
-	background-image: image('/images/social/socialicons-facebook-hover.svg');
+	background-image: image('/images/social/socialicons-facebook.svg');
 }
 
 .svg .widget.socialicons span.bk-socialicons-rss a,
 .svg .widget.profile .bk-profile-socialicons span.bk-socialicons-rss a {
-	background-image: image('/images/social/socialicons-rss-hover.svg');
+	background-image: image('/images/social/socialicons-rss.svg');
 }
 
 .svg .widget.socialicons span.bk-socialicons-googleplus a,
 .svg .widget.profile .bk-profile-socialicons span.bk-socialicons-googleplus a {
-	background-image: image('/images/social/socialicons-googleplus-hover.svg');
+	background-image: image('/images/social/socialicons-googleplus.svg');
 }
 
 .svg .widget.socialicons span.bk-socialicons-youtube a,
 .svg .widget.profile .bk-profile-socialicons span.bk-socialicons-youtube a {
-	background-image: image('/images/social/socialicons-youtube-hover.svg');
+	background-image: image('/images/social/socialicons-youtube.svg');
 }
+
+.svg .widget.socialicons span.bk-socialicons-instagram a,
+.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-instagram a {
+	background-image: image('/images/social/socialicons-instagram.svg');
+}
+
+.svg .widget.socialicons span.bk-socialicons-pinterest a,
+.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-pinterest a {
+	background-image: image('/images/social/socialicons-pinterest.svg');
+}
+
+
 
 // PNG Icons
 // ---------
@@ -875,7 +869,18 @@ button.btn,
 	background-image: image('/images/social/socialicons-youtube.png');
 }
 
+.widget.socialicons span.bk-socialicons-instagram a,
+.widget.profile .bk-profile-socialicons span.bk-socialicons-instagram a {
+	background-image: image('/images/social/socialicons-instagram.png');
+}
 
+.widget.socialicons span.bk-socialicons-pinterest a,
+.widget.profile .bk-profile-socialicons span.bk-socialicons-pinterest a {
+	background-image: image('/images/social/socialicons-pinterest.png');
+}
+
+
+/*
 
 // BK-NAV & FOOTER SVG Icons
 // -------------------------
@@ -910,7 +915,7 @@ button.btn,
 	background-image: image('/images/social/socialicons-youtube.svg');
 }
 
-
+*/
 
 
 // -----------------------------
@@ -984,7 +989,7 @@ hr.line {
 		fieldset {
 			input {
 				width: 100%;
-				height: 52px;
+				height: 40px;
 			}
 			button {
 				position: absolute;

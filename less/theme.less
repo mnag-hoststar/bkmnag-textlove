@@ -92,9 +92,11 @@ h5 {
 }
 
 blockquote {
-	border: 1px solid @button-color;
+	border: 1px solid @contrast-color;
 	padding: 30px;
 	font-style: italic;
+	color: @button-color;
+	font-size: @font-swatch4-font-size;
 	&:before {
 		display: none;
 	}
@@ -162,11 +164,14 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 
 .bk-footer {
 	background-color: @spare-color;
-	color: lighten(@paragraph-color, 10%);
+	color: lighten(@paragraph-color, 20%);
 	padding: 2em 0;
 	.widget.profile {
 		.bk-profile-socialicons {
 			margin: 0;
+			span a {
+				background-color: @contrast-color;
+			}
 		}
 	}
 }
@@ -192,6 +197,8 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 	color: @nav-color;
 	padding-bottom: 1em;
 }
+
+
 
 
 // -----------------------------
@@ -245,7 +252,7 @@ select,
 }
 
 input, select {
-	height: 52px;
+	height: 40px;
 }
 
 textarea {
