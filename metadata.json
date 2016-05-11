@@ -69,16 +69,16 @@
 	   "title": "Montserrat",
 		"font1": {
 			"font-family": "\"Josefin Sans\", \"Raleway\", \"Lucida Grande\", Helvetica, sans-serif",
-			"font-size": "36px",
-			"font-weight": "400",
-			"line-height": "52px",
+			"font-size": "40px",
+			"font-weight": "700",
+			"line-height": "48px",
 			"color": "@color-swatch4",
 			"letter-spacing": "inherit"
 		},
 		"font2": {
 			"font-family": "\"Josefin Sans\", \"Raleway\", \"Lucida Grande\", Helvetica, sans-serif",
-			"font-size": "28px",
-			"font-weight": "400",
+			"font-size": "30px",
+			"font-weight": "700",
 			"line-height": "38px",
 			"color": "@color-swatch4",
 			"letter-spacing": "inherit"
@@ -86,7 +86,7 @@
 		"font3": {
 			"font-family": "\"Josefin Sans\", \"Raleway\", \"Lucida Grande\", Helvetica, sans-serif",
 			"font-size": "24px",
-			"font-weight": "400",
+			"font-weight": "700",
 			"line-height": "34px",
 			"color": "@color-swatch4",
 			"letter-spacing": "inherit"
@@ -94,7 +94,7 @@
 		"font4": {
 			"font-family": "\"Josefin Sans\", \"Raleway\", \"Lucida Grande\", Helvetica, sans-serif",
 			"font-size": "20px",
-			"font-weight": "400",
+			"font-weight": "700",
 			"line-height": "28px",
 			"color": "@color-swatch4",
 			"letter-spacing": "inherit"
