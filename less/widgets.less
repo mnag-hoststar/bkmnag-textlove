@@ -70,6 +70,7 @@
 // Logo
 // ----
 
+
 .widget.logo {
 	display: inline-block;
 	margin-right: 10px;
@@ -93,7 +94,14 @@
 
 
 .widget.extendednavigation {
+	text-transform: uppercase;
+	display: inline-block;
+	vertical-align: middle;
 	width: 70%;
+	@media @tablet {
+		display: block;
+		width: 100%;
+	}
 	ul {
 		margin: 0 auto;
 		padding: 0;
@@ -110,23 +118,24 @@
 			}
 			ul {
 				display: block;
-				visibility: hidden; /* hides sub-menu */
+				text-align: center;
+				visibility: hidden; // hides sub-menu
 				opacity: 0;
 				position: absolute;
 				top: 100%;
 				left: -12px;
 				transform: translateZ(0);
 				transform: translateY(10%);
-				transition: all 0.5s ease 0s, visibility 0s linear 0.5s; /* the last value is the transition-delay for visibility */
+				transition: all 0.5s ease 0s, visibility 0s linear 0.5s; // the last value is the transition-delay for visibility
 			}
 			&:hover {
 				ul {
-					background-color: fade(@color-swatch7, 80%);
-					visibility: visible; /* shows sub-menu */
+					background-color: darken(@color-swatch1, 5%);
+					visibility: visible; // shows sub-menu
 					opacity: 1;
 					transform: translateX(0%);
-					transition-delay: 0s; /* this removes the transition delay so the menu will be visible while the other styles transition */
-				}	
+					transition-delay: 0s; // this removes the transition delay so the menu will be visible while the other styles transition
+				}
 			}
 			&.folder {
 				.text {
@@ -146,58 +155,36 @@
 	}
 }
 
-
-
-// Hover Effect
-// ------------
-
-.widget.extendednavigation ul li a:hover,
-.widget.extendednavigation ul li.folder .text:hover {
-	color: @color-swatch3;
-	.transition (all, 0.5s, ease);
-}
-
-
 // Responsive - Extended Navigation
 // --------------------------------
 
 @media @tablet {
 
-	.widget.extendednavigation {
-		width: 100%;
-		display: inline-block;
-		top: 0;
-		left: 0;
-		transform: none;
+	.widget .extendednavigation a.pull {
+		top: -48px;
+		&:after {
+			top: 10px;
+			left: 0;
+			height: 2px;
+			width: 30px;
+			background-color: @font-swatch6-color;
+			box-shadow: 0 9px 0 @font-swatch6-color, 0 18px 0 @font-swatch6-color;
+		}
 	}
 
-	.widget .extendednavigation a.pull {
-		margin: 0 auto;
-            left: 0;
-            top: -15px;
-            a:before,
-            a:after {
-                border-bottom: 1px solid @color-swatch3;
-            }
-            &:after {
-                background: @font-swatch6-color;
-                left: 0;
-                margin: 0 auto;
-                box-shadow: 0 6px 0 @font-swatch6-color, 0 12px 0 @font-swatch6-color;
-            }
-        }
 	.widget .extendednavigation ul {
 		width: 100%;
 		display: none;
 		margin: 0;
+		padding: 20px;
 	}
 
 	.widget.extendednavigation ul li {
 		border-bottom: 1px solid fade(@color-swatch6, 10%);
 		width: 100%;
 		padding: 0;
-		&:first-child {
-			margin-top: 30px;
+		&:last-child {
+			border-bottom: none;
 		}
 	}
 
@@ -217,10 +204,13 @@
 		position: relative;
 		z-index: 500;
 		padding: 0;
-		background-color: fade(@color-swatch7, 80%);
 	}
-
+	
 }
+
+
+
+
 
 
 // -----------------------------
