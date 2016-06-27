@@ -1,49 +1,44 @@
-// --------------------------------------
-// BaseKit Standard Theme: LESS > Widgets
-// --------------------------------------
+/*------------------------------------
+BaseKit Standard Theme: LESS > Widgets
+--------------------------------------
 
 
-// -----------------------------
-// #Table of Contents
-// -----------------------------
+-----------------------------
+#Table of Contents
+-----------------------------
+1.   #LOGO
+2.   #COMPANY NAME
+3.   #NAVIGATION
+4.   #FEATURE
+
+5.   #IMAGES
+6.   #GALLERY
+7.   #SLIDESHOW
+
+8.   #BUTTONS
+8.1  -- #STANDARD
+8.2  -- #TWEET
+8.3  -- #DROPBOX
+8.4  -- #CLICK TO CALL
+8.5  -- #PAYPAL
+
+9.    #CONTACT FORM
+10.   #SIGNUP FORM
+
+11.   #SOCIAL ICONS
+12.   #TWITTER FEED
+
+13.   #DIVIDER (KEYLINE)
+14.   #PROFILE
+15.   #MAP
+16.   #YELP
+-----------------------------
+1.-2.  #LOGO & #COMPANY NAME
+-----------------------------
 
 
-//  1.   #LOGO
-//  2.   #COMPANY NAME
-//  3.   #NAVIGATION
-//  4.   #FEATURE
-
-//  5.   #IMAGES
-//  6.   #GALLERY
-//  7.   #SLIDESHOW
-
-//  8.   #BUTTONS
-//  8.1  -- #STANDARD
-//  8.2  -- #TWEET
-//  8.3  -- #DROPBOX
-//  8.4  -- #CLICK TO CALL
-//  8.5  -- #PAYPAL
-
-//  9.   #CONTACT FORM
-// 10.   #SIGNUP FORM
-
-// 11.   #SOCIAL ICONS
-// 12.   #TWITTER FEED
-
-// 13.   #DIVIDER (KEYLINE)
-// 14.   #PROFILE
-// 15.   #MAP
-// 16.   #YELP
-
-
-// -----------------------------
-// 1.-2.  #LOGO & #COMPANY NAME
-// -----------------------------
-
-
-// Company Name
-// ------------
-
+Company Name
+---------------*/
 
 .widget.companyname {
 	display: inline-block;
@@ -57,8 +52,8 @@
 
 
 
-// Logo
-// ----
+/* Logo
+-------*/
 
 
 .widget.logo {
@@ -74,13 +69,13 @@
 
 
 
-// -----------------------------
-// 3.  #NAVIGATION
-// -----------------------------
+/* -----------------------------
+3.  #NAVIGATION
+-------------------------------
 
 
-// Widget Extended Navigation
-// --------------------------
+Widget Extended Navigation
+----------------------------*/
 
 
 .widget.extendednavigation {
@@ -145,8 +140,8 @@
 	}
 }
 
-// Responsive - Extended Navigation
-// --------------------------------
+/*Responsive - Extended Navigation
+--------------------------------*/
 
 @media @tablet {
 
@@ -199,13 +194,9 @@
 }
 
 
-
-
-
-
-// -----------------------------
-// 4.  #FEATURE
-// -----------------------------
+/* -----------------------------
+4.  #FEATURE
+-------------------------------*/
 
 
 .bk-section {
@@ -229,6 +220,7 @@
 				h2 {
 					text-transform: uppercase;
 					padding-bottom: 0;
+                    font-style:normal;
 				}
 				h3 {
 					color: fade(@font-swatch9-color, 75%);
@@ -252,8 +244,8 @@
 }
 
 
-// Feature Button Alignments
-// -------------------------
+/* Feature Button Alignments
+---------------------------*/
 
 
 .widget.feature button.btn.justifyleft {
@@ -284,8 +276,8 @@
 	margin-right: 5px;
 }
 
-// Feature Layouts
-// ---------------
+/*Feature Layouts
+-----------------*/
 
 
 /* LEFT ALIGN */
@@ -309,8 +301,8 @@
 	text-align: right;
 }
 
-// Responsive Feature
-// ------------------
+/* Responsive Feature
+---------------------*/
 
 
 @media @tablet {
@@ -368,9 +360,9 @@
 
 
 
-// -----------------------------
-// 5. #IMAGE WIDGET
-// -----------------------------
+/* -----------------------------
+5. #IMAGE WIDGET
+-------------------------------*/
 
 
 .widget.image span.image-title {
@@ -397,9 +389,9 @@
 
 
 
-// -----------------------------
-// 6.  #GALLERY
-// -----------------------------
+/* -----------------------------
+6.  #GALLERY
+-------------------------------*/
 
 
 .widget.gallery {
@@ -479,9 +471,9 @@
 
 
 
-// -----------------------------
-// 7.  #SLIDESHOW
-// -----------------------------
+/* -----------------------------
+7.  #SLIDESHOW
+-------------------------------*/
 
 
 .widget.responsiveslideshow {
@@ -562,13 +554,13 @@
 
 
 
-// -----------------------------
-// 8. #BUTTONS
-// -----------------------------
+/* -----------------------------
+8. #BUTTONS
+------------------------------*/
 
 
-// 8.1 Standard
-// ------------
+/* 8.1 Standard
+--------------*/
 
 
 .widget.button button, .btn,
@@ -604,8 +596,8 @@ button.btn,
 }
 
 
-// 8.2 Tweet
-// ---------
+/* 8.2 Tweet
+-----------*/
 
 
 .widget.tweet a {
@@ -621,8 +613,8 @@ button.btn,
 }
 
 
-// 8.3 Dropbox
-// -----------
+/* 8.3 Dropbox
+-------------*/
 
 
 .widget.dropbox button {
@@ -637,8 +629,8 @@ button.btn,
 	}
 }
 
-// 8.4 Click to call
-// -----------------
+/* 8.4 Click to call
+-------------------*/
 
 
 .widget.clicktocall {
@@ -685,8 +677,8 @@ button.btn,
 
 
 
-// 8.5 Paypal
-// ----------
+/* 8.5 Paypal
+------------*/
 
 
 .widget.paypalbuynow .widget.button.paypal {
@@ -706,12 +698,9 @@ button.btn,
 	padding: 10px 22px 10px 22px;
 }
 
-
-
-
-// -----------------------------
-// 9.  #CONTACT FORM
-// -----------------------------
+/* -----------------------------
+9.  #CONTACT FORM
+-------------------------------*/
 
 
 .widget.contactform {
@@ -734,12 +723,9 @@ button.btn,
 	}
 }
 
-
-
-
-// -------------------------------
-// 10.  #SIGNUP FORM
-// -------------------------------
+/* -------------------------------
+10.  #SIGNUP FORM
+---------------------------------*/
 
 
 .widget.signupform {
@@ -769,9 +755,9 @@ button.btn,
 
 
 
-// -----------------------------
-// 11.  #SOCIAL ICONS
-// -----------------------------
+/* -----------------------------
+11.  #SOCIAL ICONS
+-------------------------------*/
 
 
 .widget.socialicons,
@@ -799,8 +785,8 @@ button.btn,
 }
 
 
-// SVG Icons
-// ---------
+/*SVG Icons
+---------*/
 
 .svg .widget.socialicons span.bk-socialicons-twitter a,
 .svg .widget.profile .bk-profile-socialicons span.bk-socialicons-twitter a {
@@ -844,8 +830,8 @@ button.btn,
 
 
 
-// PNG Icons
-// ---------
+/* PNG Icons
+-----------*/
 
 .widget.socialicons span.bk-socialicons-twitter a,
 .widget.profile .bk-profile-socialicons span.bk-socialicons-twitter a {
@@ -890,8 +876,8 @@ button.btn,
 
 /*
 
-// BK-NAV & FOOTER SVG Icons
-// -------------------------
+BK-NAV & FOOTER SVG Icons
+-------------------------
 
 .bk-nav .widget.profile .bk-profile-socialicons span.bk-socialicons-twitter a,
 .bk-footer .widget.profile .bk-profile-socialicons span.bk-socialicons-twitter a {
@@ -926,9 +912,9 @@ button.btn,
 */
 
 
-// -----------------------------
-// 12. #TWITER FEED
-// -----------------------------
+/* -----------------------------
+12. #TWITER FEED
+-----------------------------*/
 
 
 .widget.twitter {
@@ -967,11 +953,9 @@ button.btn,
 	}
 }
 
-
-
-// -----------------------------
-// 13. #DIVIDER - LINE WIDGET
-// -----------------------------
+/*-----------------------------
+13. #DIVIDER - LINE WIDGET
+-----------------------------*/
 
 
 .widget.line {
@@ -985,11 +969,9 @@ hr.line {
 
 
 
-// -----------------------------
-// 14. #PROFILE
-// -----------------------------
-
-
+/*-----------------------------
+14. #PROFILE
+-----------------------------*/
 
 .widget.profile {
 	form {
@@ -1008,21 +990,12 @@ hr.line {
 	}
 }
 
-
-
-
-// -----------------------------
-// 15. #MAP
-// -----------------------------
+/* -----------------------------
+15. #MAP
+-------------------------------*/
 
 
 .widget.map {
 	border: 1px solid @contrast-color;
 	margin-bottom: 2em;
 }
-
-
-
-
-
-

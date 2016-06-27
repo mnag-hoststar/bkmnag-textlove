@@ -1,353 +1,343 @@
-// ------------------------------------
-// BaseKit Standard Theme: LESS > Theme
-// ------------------------------------
+/* ---------------------------------
+BaseKit Standard Theme: LESS > Theme
+------------------------------------
 
 
-// -----------------------------
-// #Table of Contents
-// -----------------------------
+-----------------------------
+#Table of Contents
+-----------------------------
 
 
-// 1. #TYPOGRAPHY
-// 2. #CUSTOM PAGE
-// 3. #HEADER
-// 4. #FOOTER
+1. #TYPOGRAPHY
+2. #CUSTOM PAGE
+3. #HEADER
+4. #FOOTER
 
 
 
-// -----------------------------
-// 1. #TYPOGRAPHY
-// -----------------------------
+-----------------------------
+1. #TYPOGRAPHY
+-----------------------------
 
 
-// Colour Swatches
-// ---------------
+Colour Swatches
+----------------
 
-// @color-swatch1: Background
-// @color-swatch2: Contrast
-// @color-swatch3: Buttons
-// @color-swatch4: Headings
-// @color-swatch5: Paragraph
-// @color-swatch6: Navigation Links
-// @color-swatch7: Spare
-
-
-// Colour Variables
-// ----------------
-
-@bg-color: @color-swatch1;          // Background
-@contrast-color: @color-swatch2;    // Contrast Colour
-@button-color: @color-swatch3;      // Button BG Colour
-@heading-color: @color-swatch4;     // Heading Text Colour (H1 - H4)
-@paragraph-color: @color-swatch5;   // Paragraph Text Colour
-@nav-color: @color-swatch6;         // Nav Link Colour
-@spare-color: @color-swatch7;       // Spare Colour
+@color-swatch1: Background
+@color-swatch2: Contrast
+@color-swatch3: Buttons
+@color-swatch4: Headings
+@color-swatch5: Paragraph
+@color-swatch6: Navigation Links
+@color-swatch7: Spare */
 
 
-// Font Swatches
-// -------------
+/* Colour Variables
+--------------------*/
+/* Background*/
+@bg-color: @color-swatch1;
 
-// font1:  Heading 1
-// font2:  Heading 2
-// font3:  Heading 3
-// font4:  Heading 4
-// font5:  Paragraph
-// font6:  Navigation Link
-// font7:  Buttons
-// font8:  Feature Headline
-// font9:  Feature Strapline
-// font10: Company Name (Logo)
+/* Contrast Colour*/
+@contrast-color: @color-swatch2;
 
+/* Button BG Colour*/
+@button-color: @color-swatch3;
+
+/* Heading Text Colour (H1 - H4)*/
+@heading-color: @color-swatch4;
+
+/* Paragraph Text Colour*/
+@paragraph-color: @color-swatch5;
+
+/* Nav Link Colour*/
+@nav-color: @color-swatch6;
+
+/* Spare Colour*/
+@spare-color: @color-swatch7;
+
+
+/* Font Swatches
+----------------
+
+font1:  Heading 1
+font2:  Heading 2
+font3:  Heading 3
+font4:  Heading 4
+font5:  Paragraph
+font6:  Navigation Link
+font7:  Buttons
+font8:  Feature Headline
+font9:  Feature Strapline
+font10: Company Name (Logo) */
 
 body {
-	font-smooth: always;
-	font-smoothing: antialiased;
-	-moz-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-font-smoothing: antialiased;
-	text-rendering: geometricPrecision;
-	letter-spacing: .02em;
-	background-color: @spare-color;
-/*	background-color: transparent;
+    font-smooth: always;
+    font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: geometricPrecision;
+    letter-spacing: .02em;
+    background-color: @spare-color;
+    /*	background-color: transparent;
 	background-attachment: fixed;
 	background-image: image('/images/main-bg.jpg');
 	background-size: cover;
 	background-position: center center; */
 }
 
-
-h1, h2, h3, h4, h5 {
-	text-transform: uppercase;
-	letter-spacing: .06em;
-	padding-bottom: .5em;
+h1,
+h2,
+h3,
+h4,
+h5 {
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    padding-bottom: .5em;
 }
 
-
 h5 {
-	font-family: @font-swatch4-font-family;
-	font-size: @font-swatch5-font-size;
-	font-weight: @font-swatch5-font-weight;
-	line-height: @font-swatch5-line-height;
-	color: @font-swatch4-color;
-	letter-spacing: @font-swatch4-letter-spacing;
+    font-family: @font-swatch4-font-family;
+    font-size: @font-swatch5-font-size;
+    font-weight: @font-swatch5-font-weight;
+    line-height: @font-swatch5-line-height;
+    color: @font-swatch4-color;
+    letter-spacing: @font-swatch4-letter-spacing;
 }
 
 blockquote {
-	border: 1px solid @contrast-color;
-	padding: 30px;
-	font-style: italic;
-	color: @button-color;
-	font-size: @font-swatch4-font-size;
-	&:before {
-		display: none;
-	}
+    border: 1px solid @contrast-color;
+    padding: 30px;
+    font-style: italic;
+    color: @button-color;
+    font-size: @font-swatch4-font-size;
+    &:before {
+        display: none;
+    }
 }
 
 .content .bk-content-text ol {
-	list-style-position: inherit;
+    list-style-position: inherit;
 }
 
-
-
-// -----------------------------
-// 2. #CUSTOM PAGE
-// -----------------------------
-
-
-body.edit .widget.navigation, body.edit .widget.extendednavigation {
-	overflow: visible;
+/* -----------------------------
+2. #CUSTOM PAGE
+------------------------------*/
+body.edit .widget.navigation,
+body.edit .widget.extendednavigation {
+    overflow: visible;
 }
 
-
-
-// -----------------------------
-// 3. #HEADER & #BK-NAV
-// -----------------------------
-
-
+/* ----------------------------
+3. #HEADER & #BK-NAV
+-----------------------------*/
 .bk-header {
-	background-color: @color-swatch7;
-	padding: 30px;
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	z-index: 9999;
-	@media @tablet {
-		display: block;
-		padding: 20px;
-	}
-	.companyheader {
-		display: inline-block;
-		vertical-align: middle;
-		width: 29%;
-		@media @tablet {
-			display: block;
-			width: 90%;
-		}
-	}
+    background-color: @color-swatch7;
+    padding: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    @media @tablet {
+        display: block;
+        padding: 20px;
+    }
+    .companyheader {
+        display: inline-block;
+        vertical-align: middle;
+        width: 29%;
+        @media @tablet {
+            display: block;
+            width: 90%;
+        }
+    }
 }
 
 .bk-pt-default {
-	.bk-header {
-		position: relative;
-	}
-	.main {
-		padding: 60px 0;
-	}
+    .bk-header {
+        position: relative;
+    }
+    .main {
+        padding: 60px 0;
+    }
 }
 
-
-
-// -----------------------------
-// 4. #FOOTER
-// -----------------------------
-
+/* -----------------------------
+4. #FOOTER
+-------------------------------*/
 .bk-footer {
-	background-color: @spare-color;
-	color: lighten(@paragraph-color, 20%);
-	padding: 2em 0;
-	.widget.profile {
-		.bk-profile-socialicons {
-			margin: 0;
-			span a {
-				background-color: @contrast-color;
-			}
-		}
-	}
+    background-color: @spare-color;
+    color: lighten(@paragraph-color, 20%);
+    padding: 2em 0;
+    .widget.profile {
+        .bk-profile-socialicons {
+            margin: 0;
+            span a {
+                background-color: @contrast-color;
+            }
+        }
+    }
 }
 
-.footerright, .footerleft {
-	display: inline-block;
-	vertical-align: middle;
-	width: 49.5%;
-	@media @mobile {
-		width: 100%;
-		text-align: center !important;
-	}
+.footerright,
+.footerleft {
+    display: inline-block;
+    vertical-align: middle;
+    width: 49.5%;
+    @media @mobile {
+        width: 100%;
+        text-align: center !important;
+    }
 }
 
 .footerright {
-	text-align: right;
+    text-align: right;
 }
 
 .bk-footer h1,
 .bk-footer h2,
 .bk-footer h3,
 .bk-footer h4 {
-	color: @nav-color;
-	padding-bottom: 1em;
+    color: @nav-color;
+    padding-bottom: 1em;
 }
 
-
-
-
-// -----------------------------
-// 5. #CONTENT
-// -----------------------------
-
+/* -----------------------------
+5. #CONTENT
+-------------------------------*/
 .widget.content {
-	padding: 0;
-	overflow: hidden;
+    padding: 0;
+    overflow: hidden;
 }
 
 .widget.content span.expand {
-	font-family: @font-swatch7-font-family;
-	margin: 10px 0;
-	cursor: pointer;
-	display: inline-block;
-	letter-spacing: .1em;
-	text-transform: uppercase;
+    font-family: @font-swatch7-font-family;
+    margin: 10px 0;
+    cursor: pointer;
+    display: inline-block;
+    letter-spacing: .1em;
+    text-transform: uppercase;
 }
 
-.expand .more, .expand .less {
-	&:hover {
-		color: @heading-color;
-	}
+.expand .more,
+.expand .less {
+    &:hover {
+        color: @heading-color;
+    }
 }
 
-
-
-// -----------------------------
-// 6. #GENERAL FORMS
-// -----------------------------
-
+/* -----------------------------
+6. #GENERAL FORMS
+-------------------------------*/
 input,
 textarea,
 select,
 .widget.profile form fieldset input {
-	background: @bg-color;
-	text-indent: 10px;
-	padding: 8px;
-	border: 1px solid @contrast-color;
-	margin-bottom: 1em;
-	.transition (all, 0.5s, ease);
-	appearance: none;
-	-moz-appearance: none;
-	-webkit-appearance: none;
-	&:focus,
-	&:hover {
-		.transition (all, 0.5s, ease);
-		border: 1px solid darken(@contrast-color, 20%);
-	}
+    background: @bg-color;
+    text-indent: 10px;
+    padding: 8px;
+    border: 1px solid @contrast-color;
+    margin-bottom: 1em;
+    .transition (all, 0.5s, ease);
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    &:focus,
+    &:hover {
+        .transition (all, 0.5s, ease);
+        border: 1px solid darken(@contrast-color, 20%);
+    }
 }
 
-input, select {
-	height: 40px;
+input,
+select {
+    height: 40px;
 }
 
 textarea {
-	height: 104px;
+    height: 104px;
 }
 
 label {
-	display: inline-block;
-	padding-bottom: .4em;
+    display: inline-block;
+    padding-bottom: .4em;
 }
 
 select {
-	cursor: pointer;
-	position: relative;
-	border-radius: 0;
-	background: image('/images/arrow-small-down.svg') no-repeat 98% center;
-	background-size: 24px;
+    cursor: pointer;
+    position: relative;
+    border-radius: 0;
+    background: image('/images/arrow-small-down.svg') no-repeat 98% center;
+    background-size: 24px;
 }
-
 
 
 /* ===============================
    ECOM
    =============================== */
 
-
-
-
-// Basket Summary
+/* Basket Summary*/
 .basket-summary-items-table {
-	border-collapse: collapse;
-	width: 100%;
-	.image-wrap {
-		background-position: 10000px;
-		line-height: 0;
-		text-align: center;
-		padding: 30px;
-		img {
-			max-width: 100%;
-			max-height: 200px;
-		}
-	}
-	td {
-		padding: 10px 0;
-	}
-	tr {
-		border-bottom: solid 1px darken(@color-swatch1, 10%);
-		&:last-of-type {
-			border-bottom: none;
-		}
-	}
-	.basket-summary-subtotal {
-		padding: 20px;
-	}
+    border-collapse: collapse;
+    width: 100%;
+    .image-wrap {
+        background-position: 10000px;
+        line-height: 0;
+        text-align: center;
+        padding: 30px;
+        img {
+            max-width: 100%;
+            max-height: 200px;
+        }
+    }
+    td {
+        padding: 10px 0;
+    }
+    tr {
+        border-bottom: solid 1px darken(@color-swatch1, 10%);
+        &:last-of-type {
+            border-bottom: none;
+        }
+    }
+    .basket-summary-subtotal {
+        padding: 20px;
+    }
 }
 
 .basket-summary-amount,
 .basket-summary-subtotal {
-	text-align: center;
+    text-align: center;
 }
 
 .basket-summary-quantitybtn {
-	button.btn {
-		padding: 7px 18px;
-	}
+    button.btn {
+        padding: 7px 18px;
+    }
 }
 
 .basket-summary-items-column {
-	width: 30%;
+    width: 30%;
 }
 
 .quantity-number {
-	display: inline-block;
-	min-width: 40px;
-	text-align: center;
+    display: inline-block;
+    min-width: 40px;
+    text-align: center;
 }
 
-
-
-
-
-// Clearfix
-// --------
-
+/* Clearfix
+----------*/
 .clearfix:before,
 .clearfix:after {
-	content: " ";
-	display: table;
+    content: " ";
+    display: table;
 }
 
 .clearfix:after {
-	clear: both;
+    clear: both;
 }
 
 .clearfix {
-	*zoom: 1;
+    *zoom: 1;
 }
