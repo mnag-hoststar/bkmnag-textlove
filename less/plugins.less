@@ -1,86 +1,85 @@
-/* -----------------------------------
-BaseKit Standard Theme: LESS > Plugins
---------------------------------------
+// --------------------------------------
+// BaseKit Standard Theme: LESS > Plugins
+// --------------------------------------
 
 
 
------------------------------
-#Table of Contents
------------------------------
+// -----------------------------
+// #Table of Contents
+// -----------------------------
 
 
-1.   #BLOG
-2.   #MENU
-3.   #E-COMMERCE
+//  1.   #BLOG
+//  2.   #MENU
+//  3.   #E-COMMERCE
 
 
 
------------------------------
-1. #BLOG
------------------------------*/
+// -----------------------------
+// 1. #BLOG
+// -----------------------------
 
 
 .blog-post-list {
-    .blog-post-item {
-        margin-bottom: 2em;
-        .blog-post-title,
-        .blog-post-summary,
-        .blog-post-more-link,
-        .blog-post-date {
-            margin-bottom: 15px;
-            padding: 0;
-        }
-        .blog-post-title a {
-            color: @font-swatch1-color;
-            padding-bottom: 2em;
-            text-decoration: none;
-            &:hover {
-                color: @button-color;
-            }
-        }
-        .blog-post-more-link a {
-            font-family: @font-swatch7-font-family;
-            font-size: @font-swatch7-font-size;
-            color: @font-swatch7-color;
-            background-color: @font-swatch7-background-color;
-            text-transform: uppercase;
-            letter-spacing: .1em;
-            text-decoration: none;
-            padding: 10px 30px 7px;
-            .transition (all, 0.5s, ease);
-            &:hover {
-                color: @font-swatch7-color-hover;
-                background-color: @font-swatch7-background-color-hover;
-                .transition (all, 0.5s, ease);
-                cursor: pointer;
-            }
-        }
-        .blog-post-more-link,
-        .blog-post-date {
-            display: inline-block;
-        }
-        .blog-post-date {
-            font-style: italic;
-            color: @font-swatch5-color;
-            float: right;
-            text-decoration: none;
-        }
-    }
+	.blog-post-item {
+		margin-bottom: 2em;
+		.blog-post-title,
+		.blog-post-summary,
+		.blog-post-more-link,
+		.blog-post-date {
+			margin-bottom: 15px;
+			padding: 0;
+		}
+		.blog-post-title a {
+			color: @font-swatch1-color;
+			padding-bottom: 2em;
+			text-decoration: none;
+			&:hover {
+				color: @button-color;
+			}
+		}
+		.blog-post-more-link a {
+			font-family: @font-swatch7-font-family;
+			font-size: @font-swatch7-font-size;
+			color: @font-swatch7-color;
+			background-color: @font-swatch7-background-color;
+			text-transform: uppercase;
+			letter-spacing: .1em;
+			text-decoration: none;
+			padding: 10px 30px 7px;
+			.transition (all, 0.5s, ease);
+			&:hover {
+				color: @font-swatch7-color-hover;
+				background-color: @font-swatch7-background-color-hover;
+				.transition (all, 0.5s, ease);
+				cursor: pointer;
+			}
+		}
+		.blog-post-more-link,
+		.blog-post-date {
+			display: inline-block;
+		}
+		.blog-post-date {
+			font-style: italic;
+			color: @font-swatch5-color;
+			float: right;
+			text-decoration: none;
+		}
+	}
 }
 
-.blog-post-tags li a,
-.blog-post-category a {
-    border: 1px solid @contrast-color;
-    border-radius: 20px;
-    padding: 1px 12px 2px;
-    display: inline-block;
-    margin-bottom: 5px;
-    line-height: 20px;
-    &:hover {
-        text-decoration: none;
-        color: darken(@color-swatch3, 15%);
-        border-color: darken(@color-swatch2, 15%);
-    }
+.blog-post-tags li a, .blog-post-category a {
+	border: 1px solid @contrast-color;
+	border-radius: 20px;
+	padding: 1px 12px 2px;
+	display: inline-block;
+	margin-bottom: 5px;
+	line-height: 20px;
+	&:hover {
+		text-decoration: none;
+		color: darken(@color-swatch3, 15%);
+		border-color: darken(@color-swatch2, 15%);
+	}
 }
 
 
@@ -100,8 +99,8 @@ BaseKit Standard Theme: LESS > Plugins
 }
 
 
-/* Blog Search
---------------*/
+// Blog Search
+// -----------
 
 
 .widget.blogsearch {
@@ -124,9 +123,9 @@ BaseKit Standard Theme: LESS > Plugins
 
 
 
-/* -----------------------------
-2. #MENU
--------------------------------*/
+// -----------------------------
+// 2. #MENU
+// -----------------------------
 
 
 
@@ -204,13 +203,13 @@ BaseKit Standard Theme: LESS > Plugins
 
 
 
-/* -----------------------------
-3. #E-COMMERCE
--------------------------------*/
+// -----------------------------
+// 3. #E-COMMERCE
+// -----------------------------
 
 
-/* Products List
----------------*/
+// Products List
+// -------------
 
 .widget.ecomproductslist {
 	width: 103.333%;
@@ -297,8 +296,8 @@ BaseKit Standard Theme: LESS > Plugins
 }
 
 
-/* Product Detail
-----------------*/
+// Product Detail
+// --------------
 
 
 .widget.ecomproduct {
@@ -440,8 +439,8 @@ BaseKit Standard Theme: LESS > Plugins
 
 
 
-/* Basket 
---------*/
+// Basket 
+// ------
 
 .widget.ecombasket {
 	margin-bottom: 2em;
