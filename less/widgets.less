@@ -35,16 +35,6 @@
 // 15.   #MAP
 // 16.   #YELP
 
-// Colour Variables
-// ----------------
-
-@bg-color: @color-swatch1;          // Background
-@contrast-color: @color-swatch2;    // Contrast Colour
-@button-color: @color-swatch3;      // Button BG Colour
-@heading-color: @color-swatch4;     // Heading Text Colour (H1 - H4)
-@paragraph-color: @color-swatch5;   // Paragraph Text Colour
-@nav-color: @color-swatch6;         // Nav Link Colour
-@spare-color: @color-swatch7;       // Spare Colour
 
 // -----------------------------
 // 1.-2.  #LOGO & #COMPANY NAME
@@ -119,22 +109,22 @@
 			ul {
 				display: block;
 				text-align: center;
-				visibility: hidden; // hides sub-menu
+				visibility: hidden; /* hides sub-menu */
 				opacity: 0;
 				position: absolute;
 				top: 100%;
 				left: -12px;
 				transform: translateZ(0);
 				transform: translateY(10%);
-				transition: all 0.5s ease 0s, visibility 0s linear 0.5s; // the last value is the transition-delay for visibility
+				transition: all 0.5s ease 0s, visibility 0s linear 0.5s; /* the last value is the transition-delay for visibility */
 			}
 			&:hover {
 				ul {
 					background-color: darken(@color-swatch1, 5%);
-					visibility: visible; // shows sub-menu
+					visibility: visible; /* shows sub-menu */
 					opacity: 1;
 					transform: translateX(0%);
-					transition-delay: 0s; // this removes the transition delay so the menu will be visible while the other styles transition
+					transition-delay: 0s; /* this removes the transition delay so the menu will be visible while the other styles transition */
 				}
 			}
 			&.folder {
@@ -208,6 +198,11 @@
 	
 }
 
+
+
+
+
+
 // -----------------------------
 // 4.  #FEATURE
 // -----------------------------
@@ -259,6 +254,7 @@
 
 // Feature Button Alignments
 // -------------------------
+
 
 .widget.feature button.btn.justifyleft {
 	text-align: left;
@@ -562,6 +558,10 @@
 	}
 }
 
+
+
+
+
 // -----------------------------
 // 8. #BUTTONS
 // -----------------------------
@@ -610,19 +610,20 @@ button.btn,
 
 .widget.tweet a {
 	padding-left: 58px;
-	background-image: image('/images/social/socialicons-twitter-hover.svg');
+	background-image: image('/images/social/socialicons-twitter.svg');
 	background-size: 36px;
 	background-repeat: no-repeat;
 	background-position: 20px center;
 	display: inline-block;
 	&:hover {
-		background-image: image('/images/social/socialicons-twitter-hover.svg');
+		background-image: image('/images/social/socialicons-twitter.svg');
 	}
 }
 
 
 // 8.3 Dropbox
 // -----------
+
 
 .widget.dropbox button {
 	margin: 0;
@@ -705,6 +706,9 @@ button.btn,
 	padding: 10px 22px 10px 22px;
 }
 
+
+
+
 // -----------------------------
 // 9.  #CONTACT FORM
 // -----------------------------
@@ -729,6 +733,9 @@ button.btn,
 		}
 	}
 }
+
+
+
 
 // -------------------------------
 // 10.  #SIGNUP FORM
@@ -758,6 +765,9 @@ button.btn,
 		}
 	}
 }
+
+
+
 
 // -----------------------------
 // 11.  #SOCIAL ICONS
@@ -879,32 +889,40 @@ button.btn,
 
 
 /*
+
 // BK-NAV & FOOTER SVG Icons
 // -------------------------
+
 .bk-nav .widget.profile .bk-profile-socialicons span.bk-socialicons-twitter a,
 .bk-footer .widget.profile .bk-profile-socialicons span.bk-socialicons-twitter a {
 	background-image: image('/images/social/socialicons-twitter.svg');
 }
+
 .bk-nav .widget.profile .bk-profile-socialicons span.bk-socialicons-linkedin a,
 .bk-footer .widget.profile .bk-profile-socialicons span.bk-socialicons-linkedin a {
 	background-image: image('/images/social/socialicons-linkedin.svg');
 }
+
 .bk-nav .widget.profile .bk-profile-socialicons span.bk-socialicons-facebook a,
 .bk-footer .widget.profile .bk-profile-socialicons span.bk-socialicons-facebook a {
 	background-image: image('/images/social/socialicons-facebook.svg');
 }
+
 .bk-nav .widget.profile .bk-profile-socialicons span.bk-socialicons-rss a,
 .bk-footer .widget.profile .bk-profile-socialicons span.bk-socialicons-rss a {
 	background-image: image('/images/social/socialicons-rss.svg');
 }
+
 .bk-nav .widget.profile .bk-profile-socialicons span.bk-socialicons-googleplus a,
 .bk-footer .widget.profile .bk-profile-socialicons span.bk-socialicons-googleplus a {
 	background-image: image('/images/social/socialicons-googleplus.svg');
 }
+
 .bk-nav .widget.profile .bk-profile-socialicons span.bk-socialicons-youtube a,
 .bk-footer .widget.profile .bk-profile-socialicons span.bk-socialicons-youtube a {
 	background-image: image('/images/social/socialicons-youtube.svg');
 }
+
 */
 
 
@@ -991,6 +1009,8 @@ hr.line {
 }
 
 
+
+
 // -----------------------------
 // 15. #MAP
 // -----------------------------
@@ -1000,3 +1020,9 @@ hr.line {
 	border: 1px solid @contrast-color;
 	margin-bottom: 2em;
 }
+
+
+
+
+
+

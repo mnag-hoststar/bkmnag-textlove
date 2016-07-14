@@ -2,16 +2,7 @@
 // BaseKit Standard Theme: LESS > Plugins
 // --------------------------------------
 
-// Colour Variables
-// ----------------
 
-@bg-color: @color-swatch1;          // Background
-@contrast-color: @color-swatch2;    // Contrast Colour
-@button-color: @color-swatch3;      // Button BG Colour
-@heading-color: @color-swatch4;     // Heading Text Colour (H1 - H4)
-@paragraph-color: @color-swatch5;   // Paragraph Text Colour
-@nav-color: @color-swatch6;         // Nav Link Colour
-@spare-color: @color-swatch7;       // Spare Colour
 
 // -----------------------------
 // #Table of Contents
@@ -21,7 +12,6 @@
 //  1.   #BLOG
 //  2.   #MENU
 //  3.   #E-COMMERCE
-
 
 
 
@@ -59,7 +49,7 @@
 			padding: 10px 30px 7px;
 			.transition (all, 0.5s, ease);
 			&:hover {
-				color: @font-swatch7-color-hover;
+				color: @font-swatch7-color;
 				background-color: @font-swatch7-background-color-hover;
 				.transition (all, 0.5s, ease);
 				cursor: pointer;
@@ -80,7 +70,6 @@
 
 .blog-post-tags li a, .blog-post-category a {
 	border: 1px solid @contrast-color;
-	border-radius: 20px;
 	padding: 1px 12px 2px;
 	display: inline-block;
 	margin-bottom: 5px;
@@ -146,7 +135,6 @@
 		li {
 			a {
 				border: 1px solid @contrast-color;
-				border-radius: 20px;
 				padding: 6px 20px;
 				&:hover {
 					text-decoration: none;
@@ -283,7 +271,6 @@
 	}
 	span.ecom-productlist-price {
 		border: 1px solid @contrast-color;
-		border-radius: 20px;
 		padding: 3px 10px 4px;
 	}
 	.ecom-productslist-image-wrap {
@@ -383,7 +370,6 @@
 			}
 			.ecom-product-add-to-cart-btn span {
 				position: relative;
-				top: -2px;
 			}
 		}
 		.ecom-product-go-to-checkout-btn-wrapper {
@@ -399,6 +385,7 @@
 			margin: 0;
 			width: 100%;
 			height: 52px;
+			line-height: 32px;
 		}
 		.ecom-product-go-to-checkout-btn-wrapper a {
 			display: block;
@@ -412,7 +399,6 @@
 		a.store-category-link {
 			border: 1px solid @contrast-color;
 			padding: 3px 13px 4px;
-			border-radius: 20px;
 			text-decoration: none;
 			&:hover {
 				border-color: darken(@color-swatch2, 15%);
@@ -463,7 +449,6 @@
 			font-size: @font-swatch7-font-size;
 			text-transform: uppercase;
 			position: relative;
-			top: -2px;
 		}
 	}
 	.ecombasket-list-container {
@@ -505,3 +490,10 @@
 .ecombasket-summary-link {
 	display: inline-block;
 }
+
+
+
+
+
+
+
