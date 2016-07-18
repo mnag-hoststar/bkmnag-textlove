@@ -49,6 +49,11 @@
 	display: inline-block;
 	vertical-align: middle;
 	text-transform: uppercase;
+	a {
+		@media @mobile {
+			font-size: bkscale(@font-swatch10-font-size,0.9);
+		}
+	}
 }
 
 .companyname a:hover {
@@ -69,6 +74,9 @@
 	a img {
 		max-height: 50px;
 		width: auto!important;
+		@media @mobile {
+			max-height: 40px;
+		}
 	}
 }
 
@@ -151,7 +159,6 @@
 @media @tablet {
 
 	.widget .extendednavigation a.pull {
-		top: -48px;
 		&:after {
 			top: 10px;
 			left: 0;
