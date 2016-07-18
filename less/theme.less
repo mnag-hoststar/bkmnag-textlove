@@ -76,6 +76,49 @@ h1, h2, h3, h4, h5 {
 	padding-bottom: .5em;
 }
 
+h1 {
+	@media @tablet {
+		font-size: bkscale(@font-swatch1-font-size,0.85);
+		line-height: bkscale(@font-swatch1-line-height,0.85);
+	}
+	@media @mobile {
+		font-size: bkscale(@font-swatch1-font-size,0.7);
+		line-height: bkscale(@font-swatch1-line-height,0.7);
+	}
+}
+
+h2 {
+	@media @tablet {
+		font-size: bkscale(@font-swatch2-font-size,0.85);
+		line-height: bkscale(@font-swatch2-line-height,0.85);
+	}
+	@media @mobile {
+		font-size: bkscale(@font-swatch2-font-size,0.7);
+		line-height: bkscale(@font-swatch2-line-height,0.7);
+	}
+}
+
+h3 {
+	@media @tablet {
+		font-size: bkscale(@font-swatch3-font-size,0.85);
+		line-height: bkscale(@font-swatch3-line-height,0.85);
+	}
+	@media @mobile {
+		font-size: bkscale(@font-swatch3-font-size,0.7);
+		line-height: bkscale(@font-swatch3-line-height,0.7);
+	}
+}
+
+h4 {
+	@media @tablet {
+		font-size: bkscale(@font-swatch4-font-size,0.85);
+		line-height: bkscale(@font-swatch4-line-height,0.85);
+	}
+	@media @mobile {
+		font-size: bkscale(@font-swatch4-font-size,0.7);
+		line-height: bkscale(@font-swatch4-line-height,0.7);
+	}
+}
 
 h5 {
 	font-family: @font-swatch4-font-family;
@@ -84,6 +127,14 @@ h5 {
 	line-height: @font-swatch5-line-height;
 	color: @font-swatch4-color;
 	letter-spacing: @font-swatch4-letter-spacing;
+	@media @tablet {
+		font-size: bkscale(@font-swatch5-font-size,0.85);
+		line-height: bkscale(@font-swatch5-line-height,0.85);
+	}
+	@media @mobile {
+		font-size: bkscale(@font-swatch5-font-size,0.7);
+		line-height: bkscale(@font-swatch5-line-height,0.7);
+	}
 }
 
 blockquote {
