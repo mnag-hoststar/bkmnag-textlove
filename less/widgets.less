@@ -99,7 +99,6 @@
 	@media @tablet {
 		display: block;
 		width: 100%;
-		margin-top: -46px;
 	}
 	ul {
 		margin: 0 auto;
@@ -107,7 +106,7 @@
 		display: block;
 		li {
 			a {
-				padding: 10px 30px;
+				padding: 0 30px;
 				margin: 0;
 				text-transform: uppercase;
 				letter-spacing: .1em;
@@ -123,15 +122,24 @@
 				position: absolute;
 				top: 100%;
 				left: -12px;
+				padding: 10px;
 				transform: translateZ(0);
 				transform: translateY(10%);
 				transition: all 0.5s ease 0s, visibility 0s linear 0.5s; /* the last value is the transition-delay for visibility */
+				li {
+					a {
+						span {
+							font-size: 13px;
+						}
+					}
+				}
 			}
 			&:hover {
 				ul {
 					background-color: darken(@color-swatch1, 5%);
 					visibility: visible; /* shows sub-menu */
 					opacity: 1;
+					padding: 10px;
 					transform: translateX(0%);
 					transition-delay: 0s; /* this removes the transition delay so the menu will be visible while the other styles transition */
 				}
@@ -160,7 +168,7 @@
 @media @tablet {
 
 	.widget .extendednavigation a.pull {
-		top: 0;
+		top: -47px;
 		&:after {
 			top: 10px;
 			left: 0;
@@ -174,7 +182,6 @@
 	.widget .extendednavigation ul {
 		width: 100%;
 		display: none;
-		margin-top: 46px;
 		padding: 20px;
 	}
 
