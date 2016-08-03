@@ -126,13 +126,6 @@
 				transform: translateZ(0);
 				transform: translateY(10%);
 				transition: all 0.5s ease 0s, visibility 0s linear 0.5s; /* the last value is the transition-delay for visibility */
-				li {
-					a {
-						span {
-							font-size: 13px;
-						}
-					}
-				}
 			}
 			&:hover {
 				ul {
@@ -192,11 +185,17 @@
 		&:last-child {
 			border-bottom: none;
 		}
+		a {
+			padding: 10px 30px;
+		}
 	}
 
 	.widget .extendednavigation ul li.folder ul li {
 		margin: 0;
 		padding: 0;
+		a {
+			padding: 0;
+		}
 	}
 
 	.widget.extendednavigation ul li > ul {
@@ -210,6 +209,7 @@
 		position: relative;
 		z-index: 500;
 		padding: 0;
+		margin: 0;
 	}
 	
 }
