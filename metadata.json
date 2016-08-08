@@ -1,7 +1,7 @@
 {
 	"name":"Text Love",
 	"thumbnail":"thumbnail.png",
-	"screenshot":"screenshot.png",
+	"screenshot":"textlove-screenshot.png",
 	"templateType":"standard",
 	"pageTypes":["home"],
 	"tags": {
