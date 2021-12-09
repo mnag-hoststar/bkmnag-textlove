@@ -110,67 +110,86 @@
 }
 
 // Responsive - Extended Navigation
-// --------------------------------
 
-@media @tablet {
-
-	.widget .extendednavigation a.pull {
-		top: 10px;
-		&:after {
+.widget .extendednavigation {
+	a.pull {
+		@media @tablet {
 			top: 10px;
-			left: 0;
-			height: 2px;
-			width: 30px;
-			background-color: @font-swatch6-color;
-			box-shadow: 0 9px 0 @font-swatch6-color, 0 18px 0 @font-swatch6-color;
+		}
+
+		@media @mobile {
+			top: 0;
+		}
+
+		&:after {
+			@media @tablet {
+				top: 10px;
+				left: 0;
+				height: 2px;
+				width: 30px;
+				background-color: @font-swatch6-color;
+				box-shadow: 0 9px 0 @font-swatch6-color, 0 18px 0 @font-swatch6-color;
+			}
 		}
 	}
 
-	.widget .extendednavigation ul {
-		width: 100%;
-		display: none;
-		padding: 20px;
-	}
-
-	.widget.extendednavigation ul li {
-		border-bottom: 1px solid fade(@color-swatch6, 10%);
-		width: 100%;
-		padding: 0;
-		&:last-child {
-			border-bottom: none;
+	ul {
+		@media @tablet {
+			width: 100%;
+			display: none;
+			padding: 20px;
 		}
-		a {
-			padding: 10px 30px;
-		}
-	}
 
-	.widget .extendednavigation ul li.folder ul li {
-		margin: 0;
-		padding: 0;
-		a {
-			padding: 0;
-		}
-	}
-
-	.widget.extendednavigation ul li > ul {
-		display: none!important;
-		left: 0;
-	}
-
-	.widget.extendednavigation ul li:hover > ul {
-		display: block !important;
-		width: 100%;
-		position: relative;
-		z-index: 500;
-		padding: 0;
-		margin: 0;
-	}
+		li {
+			@media @tablet {
+				border-bottom: 1px solid fade(@color-swatch6, 10%);
+				width: 100%;
+				padding: 0;
+			}
 	
-}
-
-@media @mobile {
-	.widget .extendednavigation a.pull {
-		top: 0;
+			&:last-child {
+				@media @tablet {
+					border-bottom: none;
+				}
+			}
+	
+			a {
+				@media @tablet {
+					padding: 10px 30px;
+				}
+			}
+	
+			&.folder ul li {
+				@media @tablet {
+					margin: 0;
+					padding: 0;
+				}
+		
+				a {
+					@media @tablet {
+						padding: 0;
+					}
+				}
+			}
+		
+			> ul {
+				@media @tablet {
+					display: none!important;
+					left: 0;
+				}
+			}
+		
+			&:hover > ul {
+				@media @tablet {
+					display: block !important;
+					width: 100%;
+					position: relative;
+					z-index: 500;
+					padding: 0;
+					margin: 0;
+				}
+			}
+		}
 	}
 }
 
@@ -190,8 +209,26 @@
 	.feature-bgimg {
 		height: 100% !important;
 		height: 100vh !important;
+
+		@media @tablet {
+			height: 300px;
+		}
+
+		@media @mobile {
+			height: 220px;
+		}
+
 		.content {
 			text-align: center;
+
+			@media @tablet {
+				height: 300px;
+			}
+
+			@media @mobile {
+				height: 220px;
+			}
+
 			.spare {
 				margin: 0 40px;
 				letter-spacing: .1em;
@@ -199,12 +236,35 @@
 				h2 {
 					text-transform: uppercase;
 					padding-bottom: 0;
+					
+					@media @tablet {
+						font-size: bkscale(@font-swatch8-font-size,0.7);
+						line-height: bkscale(@font-swatch8-line-height,0.7);
+						letter-spacing: .1em;
+					}
+
+					@media @mobile {
+						font-size: bkscale(@font-swatch8-font-size,0.6);
+						line-height: bkscale(@font-swatch8-line-height,0.6);
+						padding-bottom: .1em;
+					}
 				}
 
 				h3 {
 					color: fade(@font-swatch9-color, 75%);
 					font-style: italic;
 					text-transform: initial;
+
+					@media @tablet {
+						font-size: bkscale(@font-swatch9-font-size,0.8);
+						line-height: bkscale(@font-swatch9-line-height,0.8);
+					}
+
+					@media @mobile {
+						font-size: bkscale(@font-swatch9-font-size,0.8);
+						line-height: bkscale(@font-swatch9-line-height,0.8);
+						padding-bottom: .8em;
+					}
 				}
 
 				.feature-btn {
@@ -214,6 +274,13 @@
 						padding: 10px 30px 7px;
 						text-decoration: none;
 						.transition (all, 0.5s, ease);
+
+						@media @mobile {
+							width: 100%;
+							font-size: bkscale(@font-swatch7-font-size,0.8);
+							line-height: bkscale(@font-swatch7-line-height,0.8);
+						}
+
 						&:hover {
 							.transition (all, 0.5s, ease);
 						}
@@ -222,153 +289,77 @@
 			}
 		}
 	}
-}
 
-
-// Feature Button Alignments
-// -------------------------
-
-
-.widget.feature button.btn.justifyleft {
-	text-align: left;
-}
-
-.widget.feature button.btn.justifycenter {
-	text-align: center;
-}
-
-.widget.feature button.btn.justifyright {
-	text-align: right;
-}
-
-.widget.feature button.btn.justifyfull {
-	text-align: justify;
-}
-
-.widget.feature button.btn.italic {
-	font-style: italic;
-}
-
-.widget.feature button.btn.bold {
-	font-weight: bold;
-}
-
-.widget.feature button i {
-	margin-right: 5px;
-}
-
-// Feature Layouts
-// ---------------
-
-
-/* LEFT ALIGN */
-
-.widget.feature.align-left .content {
-	width: 100%;
-	text-align: left;
-}
-
-/* CENTER ALIGN */
-
-.widget.feature.align-center .content {
-	width: 100%;
-	text-align: center;
-}
-
-/* RIGHT ALIGN */
-
-.widget.feature.align-right .content {
-	width: 100%;
-	text-align: right;
-}
-
-// Responsive Feature
-// ------------------
-
-
-@media @tablet {
-
-	.widget.feature {
-		.feature-bgimg {
-			height: 300px;
-			.content {
-				height: 300px;
-			}
+	button.btn {
+		&.justifyleft {
+			text-align: left;
 		}
-		h2 {
-			font-size: bkscale(@font-swatch8-font-size,0.7);
-			line-height: bkscale(@font-swatch8-line-height,0.7);
-			letter-spacing: .1em;
+		
+		&.justifycenter {
+			text-align: center;
 		}
-		h3 {
-			font-size: bkscale(@font-swatch9-font-size,0.8);
-			line-height: bkscale(@font-swatch9-line-height,0.8);
+		
+		&.justifyright {
+			text-align: right;
 		}
-		.feature-btn button {
+		
+		&.justifyfull {
+			text-align: justify;
 		}
+		
+		&.italic {
+			font-style: italic;
+		}
+		
+		&.bold {
+			font-weight: bold;
+		}
+	}
+	
+	button i {
+		margin-right: 5px;
+	}
+
+	&.align-left .content {
+		width: 100%;
+		text-align: left;
+	}
+	
+	&.align-center .content {
+		width: 100%;
+		text-align: center;
+	}
+	
+	&.align-right .content {
+		width: 100%;
+		text-align: right;
 	}
 }
 
-@media @mobile {
+// IMAGE WIDGET
 
-	.widget.feature {
-		.feature-bgimg {
-			height: 220px;
-			.content {
-				height: 220px;
-			}
-		}
-		h2 {
-			font-size: bkscale(@font-swatch8-font-size,0.6);
-			line-height: bkscale(@font-swatch8-line-height,0.6);
-			padding-bottom: .1em;
-		}
-		h3 {
-			font-size: bkscale(@font-swatch9-font-size,0.8);
-			line-height: bkscale(@font-swatch9-line-height,0.8);
-			padding-bottom: .8em;
-		}
-		.feature-btn {
-			button {
-				width: 100%;
-				font-size: bkscale(@font-swatch7-font-size,0.8);
-				line-height: bkscale(@font-swatch7-line-height,0.8);
-			}
+.widget.image {
+	span.image-title {
+		margin: 10px 0 0;
+		color: @heading-color;
+
+		&:hover {
+			color: lighten(@color-swatch4, 20%);
 		}
 	}
-}
 
-
-
-
-// -----------------------------
-// 5. #IMAGE WIDGET
-// -----------------------------
-
-
-.widget.image span.image-title {
-	margin: 10px 0 0;
-	color: @heading-color;
-	&:hover {
-		color: lighten(@color-swatch4, 20%);
+	span.image-description {
+		margin: 0 0 10px;
+		color: @paragraph-color;
+		&:hover {
+			color: lighten(@color-swatch5, 20%);
+		}
+	}
+	
+	a:hover {
+		text-decoration: none;
 	}
 }
-
-
-.widget.image span.image-description {
-	margin: 0 0 10px;
-	color: @paragraph-color;
-	&:hover {
-		color: lighten(@color-swatch5, 20%);
-	}
-}
-
-.widget.image a:hover {
-	text-decoration: none;
-}
-
-
-
 
 // GALLERY
 
@@ -534,10 +525,11 @@
 			height: 8px;
 			margin: 0 4px;
 			cursor: pointer;
-		}
-		.dot.selected {
-			background-color: @button-color;
-			border: none;
+		
+			&.selected {
+				background-color: @button-color;
+				border: none;
+			}
 		}
 	}
 }
@@ -612,51 +604,50 @@ button.btn,
 
 .widget.clicktocall {
 	padding: 8px 0;
-}
 
-.widget.clicktocall a {
-	padding: 10px 0;
-	font-family: @font-swatch5-font-family;
-	font-size: @font-swatch5-font-size;
-	font-weight: @font-swatch5-font-weight;
-	line-height: @font-swatch5-line-height;
-	color: @font-swatch5-color;
-	letter-spacing: @font-swatch5-letter-spacing;
-	text-decoration: none;
-	&:hover {
-		cursor: pointer;
-	}
-	@media @mobile {
-		display: inline-block;
-		background-image: image('/images/call-icon.svg');
-		background-size: 30px;
-		background-repeat: no-repeat;
-		background-position: 20px center;
-		padding: 12px 30px 12px 58px;
-		border: 2px solid @spare-color;
-		text-transform: uppercase;
-		letter-spacing: .1em;
-		font-family: @font-swatch7-font-family;
-		font-size: @font-swatch7-font-size;
-		font-weight: @font-swatch7-font-weight;
-		background-color: @font-swatch7-background-color;
-		color: @font-swatch7-color;
-		.transition (all, 0.5s, ease);
-		&:hover {
-			background-color: @font-swatch7-background-color-hover;
-			padding: 12px 30px 12px 58px;
+	a {
+		padding: 10px 0;
+		font-family: @font-swatch5-font-family;
+		font-size: @font-swatch5-font-size;
+		font-weight: @font-swatch5-font-weight;
+		line-height: @font-swatch5-line-height;
+		color: @font-swatch5-color;
+		letter-spacing: @font-swatch5-letter-spacing;
+		text-decoration: none;
+
+		@media @mobile {
+			display: inline-block;
+			background-image: image('/images/call-icon.svg');
 			background-size: 30px;
+			background-repeat: no-repeat;
 			background-position: 20px center;
+			padding: 12px 30px 12px 58px;
+			border: 2px solid @spare-color;
+			text-transform: uppercase;
+			letter-spacing: .1em;
+			font-family: @font-swatch7-font-family;
+			font-size: @font-swatch7-font-size;
+			font-weight: @font-swatch7-font-weight;
+			background-color: @font-swatch7-background-color;
+			color: @font-swatch7-color;
 			.transition (all, 0.5s, ease);
+		}
+
+		&:hover {
+			cursor: pointer;
+
+			@media @mobile {
+				background-color: @font-swatch7-background-color-hover;
+				padding: 12px 30px 12px 58px;
+				background-size: 30px;
+				background-position: 20px center;
+				.transition (all, 0.5s, ease);
+			}
 		}
 	}
 }
 
-
-
-// 8.5 Paypal
-// ----------
-
+// Paypal
 
 .widget.paypalbuynow .widget.button.paypal {
 	padding-left: 48px;
@@ -749,134 +740,48 @@ button.btn,
 			}
 		}
 	}
+
+	span.bk-socialicons-twitter a {
+		background-image: image('/images/social/socialicons-twitter.png');
+		background-image: image('/images/social/socialicons-twitter.svg');
+	}
+	
+	span.bk-socialicons-linkedin a {
+		background-image: image('/images/social/socialicons-linkedin.png');
+		background-image: image('/images/social/socialicons-linkedin.svg');
+	}
+	
+	span.bk-socialicons-facebook a {
+		background-image: image('/images/social/socialicons-facebook.png');
+		background-image: image('/images/social/socialicons-facebook.svg');
+	}
+	
+	span.bk-socialicons-rss a {
+		background-image: image('/images/social/socialicons-rss.png');
+		background-image: image('/images/social/socialicons-rss.svg');
+	}
+	
+	span.bk-socialicons-googleplus a {
+		background-image: image('/images/social/socialicons-googleplus.png');
+		background-image: image('/images/social/socialicons-googleplus.svg');
+	}
+	
+	span.bk-socialicons-youtube a {
+		background-image: image('/images/social/socialicons-youtube.png');
+		background-image: image('/images/social/socialicons-youtube.svg');
+	}
+	
+	span.bk-socialicons-instagram a {
+		background-image: image('/images/social/socialicons-instagram.png');
+		background-image: image('/images/social/socialicons-instagram.svg');
+	}
+	
+	span.bk-socialicons-pinterest a {
+		background-image: image('/images/social/socialicons-pinterest.png');
+		background-image: image('/images/social/socialicons-pinterest.svg');
+	}
 }
 
-
-// SVG Icons
-// ---------
-
-.svg .widget.socialicons span.bk-socialicons-twitter a,
-.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-twitter a {
-	background-image: image('/images/social/socialicons-twitter.svg');
-}
-
-.svg .widget.socialicons span.bk-socialicons-linkedin a,
-.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-linkedin a {
-	background-image: image('/images/social/socialicons-linkedin.svg');
-}
-
-.svg .widget.socialicons span.bk-socialicons-facebook a,
-.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-facebook a {
-	background-image: image('/images/social/socialicons-facebook.svg');
-}
-
-.svg .widget.socialicons span.bk-socialicons-rss a,
-.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-rss a {
-	background-image: image('/images/social/socialicons-rss.svg');
-}
-
-.svg .widget.socialicons span.bk-socialicons-googleplus a,
-.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-googleplus a {
-	background-image: image('/images/social/socialicons-googleplus.svg');
-}
-
-.svg .widget.socialicons span.bk-socialicons-youtube a,
-.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-youtube a {
-	background-image: image('/images/social/socialicons-youtube.svg');
-}
-
-.svg .widget.socialicons span.bk-socialicons-instagram a,
-.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-instagram a {
-	background-image: image('/images/social/socialicons-instagram.svg');
-}
-
-.svg .widget.socialicons span.bk-socialicons-pinterest a,
-.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-pinterest a {
-	background-image: image('/images/social/socialicons-pinterest.svg');
-}
-
-
-
-// PNG Icons
-// ---------
-
-.widget.socialicons span.bk-socialicons-twitter a,
-.widget.profile .bk-profile-socialicons span.bk-socialicons-twitter a {
-	background-image: image('/images/social/socialicons-twitter.png');
-}
-
-.widget.socialicons span.bk-socialicons-linkedin a,
-.widget.profile .bk-profile-socialicons span.bk-socialicons-linkedin a {
-	background-image: image('/images/social/socialicons-linkedin.png');
-}
-
-.widget.socialicons span.bk-socialicons-facebook a,
-.widget.profile .bk-profile-socialicons span.bk-socialicons-facebook a {
-	background-image: image('/images/social/socialicons-facebook.png');
-}
-
-.widget.socialicons span.bk-socialicons-rss a,
-.widget.profile .bk-profile-socialicons span.bk-socialicons-rss a {
-	background-image: image('/images/social/socialicons-rss.png');
-}
-
-.widget.socialicons span.bk-socialicons-googleplus a,
-.widget.profile .bk-profile-socialicons span.bk-socialicons-googleplus a {
-	background-image: image('/images/social/socialicons-googleplus.png');
-}
-
-.widget.socialicons span.bk-socialicons-youtube a,
-.widget.profile .bk-profile-socialicons span.bk-socialicons-youtube a {
-	background-image: image('/images/social/socialicons-youtube.png');
-}
-
-.widget.socialicons span.bk-socialicons-instagram a,
-.widget.profile .bk-profile-socialicons span.bk-socialicons-instagram a {
-	background-image: image('/images/social/socialicons-instagram.png');
-}
-
-.widget.socialicons span.bk-socialicons-pinterest a,
-.widget.profile .bk-profile-socialicons span.bk-socialicons-pinterest a {
-	background-image: image('/images/social/socialicons-pinterest.png');
-}
-
-
-/*
-
-// BK-NAV & FOOTER SVG Icons
-// -------------------------
-
-.bk-nav .widget.profile .bk-profile-socialicons span.bk-socialicons-twitter a,
-.bk-footer .widget.profile .bk-profile-socialicons span.bk-socialicons-twitter a {
-	background-image: image('/images/social/socialicons-twitter.svg');
-}
-
-.bk-nav .widget.profile .bk-profile-socialicons span.bk-socialicons-linkedin a,
-.bk-footer .widget.profile .bk-profile-socialicons span.bk-socialicons-linkedin a {
-	background-image: image('/images/social/socialicons-linkedin.svg');
-}
-
-.bk-nav .widget.profile .bk-profile-socialicons span.bk-socialicons-facebook a,
-.bk-footer .widget.profile .bk-profile-socialicons span.bk-socialicons-facebook a {
-	background-image: image('/images/social/socialicons-facebook.svg');
-}
-
-.bk-nav .widget.profile .bk-profile-socialicons span.bk-socialicons-rss a,
-.bk-footer .widget.profile .bk-profile-socialicons span.bk-socialicons-rss a {
-	background-image: image('/images/social/socialicons-rss.svg');
-}
-
-.bk-nav .widget.profile .bk-profile-socialicons span.bk-socialicons-googleplus a,
-.bk-footer .widget.profile .bk-profile-socialicons span.bk-socialicons-googleplus a {
-	background-image: image('/images/social/socialicons-googleplus.svg');
-}
-
-.bk-nav .widget.profile .bk-profile-socialicons span.bk-socialicons-youtube a,
-.bk-footer .widget.profile .bk-profile-socialicons span.bk-socialicons-youtube a {
-	background-image: image('/images/social/socialicons-youtube.svg');
-}
-
-*/
 // TWITER FEED
 
 .widget.twitter {

@@ -399,26 +399,38 @@
 	}
 }
 
-@media @mobile {
-	.basket-summary-items-table {
-		td, th {
+.basket-summary-items-table {
+	td, th {
+		@media @mobile {
 			float: left;
 			width: 100%;
 			padding: 3px 0;
 		}
-		.image-wrap {
+	}
+
+	.image-wrap {
+		@media @mobile {
 			padding: 10px;
 		}
-		.basket-summary-amount, 
-		.basket-summary-subtotal {
+	}
+
+	.basket-summary-amount, 
+	.basket-summary-subtotal {
+		@media @mobile {
 			padding: 10px 0;
 			text-align: right;
 		}
-		.basket-summary-items-column {
+	}
+
+	.basket-summary-items-column {
+		@media @mobile {
 			text-align: left;
 		}
-		.basket-summary-amount-column,
-		.basket-summary-details-column {
+	}
+
+	.basket-summary-amount-column,
+	.basket-summary-details-column {
+		@media @mobile {
 			display: none;
 		}
 	}
@@ -439,6 +451,15 @@
 			font-size: @font-swatch7-font-size;
 			text-transform: uppercase;
 			position: relative;
+
+			.svg &:before {
+				background-image: image('/images/basket.svg');
+				background-size: 100%;
+				width: 20px;
+				height: 20px;
+				position: relative;
+				top: 4px;
+			}
 		}
 	}
 
@@ -470,7 +491,6 @@
 	}
 }
 
-.svg .widget.ecombasket .ecombasket-pull p:before,
 .widget.ecomproduct .ecom-product .btn.ecom-product-add-to-cart-btn .text:before {
 	background-image: image('/images/basket.svg');
 	background-size: 100%;
