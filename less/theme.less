@@ -1,70 +1,22 @@
-// ------------------------------------
-// BaseKit Standard Theme: LESS > Theme
-// ------------------------------------
+// Theme
 
-
-// -----------------------------
-// #Table of Contents
-// -----------------------------
-
-
-// 1. #TYPOGRAPHY
-// 2. #CUSTOM PAGE
-// 3. #HEADER
-// 4. #FOOTER
-
-
-
-// -----------------------------
-// 1. #TYPOGRAPHY
-// -----------------------------
-
-
-// Colour Swatches
-// ---------------
-
-// @color-swatch1: Background
-// @color-swatch2: Contrast
-// @color-swatch3: Buttons
-// @color-swatch4: Headings
-// @color-swatch5: Paragraph
-// @color-swatch6: Navigation Links
-// @color-swatch7: Spare
-
+// TYPOGRAPHY
 
 // Colour Variables
-// ----------------
 
-@bg-color: @color-swatch1;          // Background
-@contrast-color: @color-swatch2;    // Contrast Colour
-@button-color: @color-swatch3;      // Button BG Colour
-@heading-color: @color-swatch4;     // Heading Text Colour (H1 - H4)
-@paragraph-color: @color-swatch5;   // Paragraph Text Colour
-@nav-color: @color-swatch6;         // Nav Link Colour
-@spare-color: @color-swatch7;       // Spare Colour
+@bg-color: @color-swatch1; 
+@contrast-color: @color-swatch2;
+@button-color: @color-swatch3;
+@heading-color: @color-swatch4;
+@paragraph-color: @color-swatch5;
+@nav-color: @color-swatch6;
+@spare-color: @color-swatch7;
 
 
 // Font Swatches
-// -------------
-
-// font1:  Heading 1
-// font2:  Heading 2
-// font3:  Heading 3
-// font4:  Heading 4
-// font5:  Paragraph
-// font6:  Navigation Link
-// font7:  Buttons
-// font8:  Feature Headline
-// font9:  Feature Strapline
-// font10: Company Name (Logo)
-
 
 body {
 	font-smooth: always;
-	font-smoothing: antialiased;
-	-moz-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-font-smoothing: antialiased;
 	text-rendering: geometricPrecision;
 	letter-spacing: .02em;
 }
@@ -85,6 +37,7 @@ h1 {
 		font-size: bkscale(@font-swatch1-font-size,0.85);
 		line-height: bkscale(@font-swatch1-line-height,0.85);
 	}
+	
 	@media @mobile {
 		font-size: bkscale(@font-swatch1-font-size,0.7);
 		line-height: bkscale(@font-swatch1-line-height,0.7);
@@ -96,6 +49,7 @@ h2 {
 		font-size: bkscale(@font-swatch2-font-size,0.85);
 		line-height: bkscale(@font-swatch2-line-height,0.85);
 	}
+
 	@media @mobile {
 		font-size: bkscale(@font-swatch2-font-size,0.7);
 		line-height: bkscale(@font-swatch2-line-height,0.7);
@@ -107,6 +61,7 @@ h3 {
 		font-size: bkscale(@font-swatch3-font-size,0.85);
 		line-height: bkscale(@font-swatch3-line-height,0.85);
 	}
+
 	@media @mobile {
 		font-size: bkscale(@font-swatch3-font-size,0.7);
 		line-height: bkscale(@font-swatch3-line-height,0.7);
@@ -118,6 +73,7 @@ h4 {
 		font-size: bkscale(@font-swatch4-font-size,0.85);
 		line-height: bkscale(@font-swatch4-line-height,0.85);
 	}
+
 	@media @mobile {
 		font-size: bkscale(@font-swatch4-font-size,0.7);
 		line-height: bkscale(@font-swatch4-line-height,0.7);
@@ -131,10 +87,12 @@ h5 {
 	line-height: @font-swatch5-line-height;
 	color: @font-swatch4-color;
 	letter-spacing: @font-swatch4-letter-spacing;
+
 	@media @tablet {
 		font-size: bkscale(@font-swatch5-font-size,0.85);
 		line-height: bkscale(@font-swatch5-line-height,0.85);
 	}
+
 	@media @mobile {
 		font-size: bkscale(@font-swatch5-font-size,0.7);
 		line-height: bkscale(@font-swatch5-line-height,0.7);
@@ -147,6 +105,7 @@ blockquote {
 	font-style: italic;
 	color: @button-color;
 	font-size: @font-swatch4-font-size;
+
 	&:before {
 		display: none;
 	}
@@ -156,23 +115,13 @@ blockquote {
 	list-style-position: inherit;
 }
 
-
-
-// -----------------------------
-// 2. #CUSTOM PAGE
-// -----------------------------
-
+// CUSTOM PAGE
 
 body.edit .widget.navigation, body.edit .widget.extendednavigation {
 	overflow: visible;
 }
 
-
-
-// -----------------------------
-// 3. #HEADER & #BK-NAV
-// -----------------------------
-
+// HEADER & BK-NAV
 
 .bk-header {
 	padding: 30px;
@@ -181,6 +130,7 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 	left: 0;
 	right: 0;
 	z-index: 9999;
+
 	@media @tablet {
 		display: inline-block;
 		padding: 20px;
@@ -188,10 +138,12 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 		position: relative;
 		width: 100%;
 	}
+
 	.companyheader {
 		display: inline-block;
 		vertical-align: middle;
 		width: 29%;
+
 		@media @tablet {
 			display: block;
 			width: 90%;
@@ -204,6 +156,7 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 	.bk-header {
 		position: relative;
 	}
+
 	.main {
 		padding: 60px 0;
 		@media @tablet {
@@ -212,19 +165,17 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 	}
 }
 
-
-
-// -----------------------------
-// 4. #FOOTER
-// -----------------------------
+// FOOTER
 
 .bk-footer {
 	background-color: @spare-color;
 	color: lighten(@paragraph-color, 20%);
 	padding: 2em 0;
+
 	.widget.profile {
 		.bk-profile-socialicons {
 			margin: 0;
+
 			span a {
 				background-color: @contrast-color;
 			}
@@ -236,6 +187,7 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 	display: inline-block;
 	vertical-align: middle;
 	width: 49.5%;
+
 	@media @mobile {
 		width: 100%;
 		text-align: center !important;
@@ -255,38 +207,30 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 	padding-bottom: 1em;
 }
 
-
-
-
-// -----------------------------
-// 5. #CONTENT
-// -----------------------------
+// CONTENT
 
 .widget.content {
 	padding: 0;
 	overflow: hidden;
+
+	span.expand {
+		font-family: @font-swatch7-font-family;
+		margin: 10px 0;
+		cursor: pointer;
+		display: inline-block;
+		letter-spacing: .1em;
+		text-transform: uppercase;
+	}
 }
 
-.widget.content span.expand {
-	font-family: @font-swatch7-font-family;
-	margin: 10px 0;
-	cursor: pointer;
-	display: inline-block;
-	letter-spacing: .1em;
-	text-transform: uppercase;
-}
-
-.expand .more, .expand .less {
+.expand .more,
+.expand .less {
 	&:hover {
 		color: @heading-color;
 	}
 }
 
-
-
-// -----------------------------
-// 6. #GENERAL FORMS
-// -----------------------------
+// GENERAL FORMS
 
 input,
 textarea,
@@ -333,38 +277,38 @@ select {
 	margin-bottom: 1em;
 }
 
-
-
-/* ===============================
-   ECOM
-   =============================== */
-
-
-
+// E-COMMERCE
 
 // Basket Summary
+
 .basket-summary-items-table {
 	border-collapse: collapse;
 	width: 100%;
+
 	.image-wrap {
 		background-position: 10000px;
 		line-height: 0;
 		text-align: center;
 		padding: 30px;
+
 		img {
 			max-width: 100%;
 			max-height: 200px;
 		}
 	}
+
 	td {
 		padding: 10px 0;
 	}
+
 	tr {
 		border-bottom: solid 1px darken(@color-swatch1, 10%);
+
 		&:last-of-type {
 			border-bottom: none;
 		}
 	}
+
 	.basket-summary-subtotal {
 		padding: 20px;
 	}
@@ -391,23 +335,18 @@ select {
 	text-align: center;
 }
 
-
-
-
-
 // Clearfix
-// --------
-
-.clearfix:before,
-.clearfix:after {
-	content: " ";
-	display: table;
-}
-
-.clearfix:after {
-	clear: both;
-}
 
 .clearfix {
 	*zoom: 1;
+
+	&:before,
+	&:after {
+		content: " ";
+		display: table;
+	}
+	
+	&:after {
+		clear: both;
+	}
 }

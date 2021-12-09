@@ -1,54 +1,14 @@
-// --------------------------------------
-// BaseKit Standard Theme: LESS > Widgets
-// --------------------------------------
+// Widgets
 
-
-// -----------------------------
-// #Table of Contents
-// -----------------------------
-
-
-//  1.   #LOGO
-//  2.   #COMPANY NAME
-//  3.   #NAVIGATION
-//  4.   #FEATURE
-
-//  5.   #IMAGES
-//  6.   #GALLERY
-//  7.   #SLIDESHOW
-
-//  8.   #BUTTONS
-//  8.1  -- #STANDARD
-//  8.2  -- #TWEET
-//  8.3  -- #DROPBOX
-//  8.4  -- #CLICK TO CALL
-//  8.5  -- #PAYPAL
-
-//  9.   #CONTACT FORM
-// 10.   #SIGNUP FORM
-
-// 11.   #SOCIAL ICONS
-// 12.   #TWITTER FEED
-
-// 13.   #DIVIDER (KEYLINE)
-// 14.   #PROFILE
-// 15.   #MAP
-// 16.   #YELP
-
-
-// -----------------------------
-// 1.-2.  #LOGO & #COMPANY NAME
-// -----------------------------
-
+// LOGO & COMPANY NAME
 
 // Company Name
-// ------------
-
 
 .widget.companyname {
 	display: inline-block;
 	vertical-align: middle;
 	text-transform: uppercase;
+
 	a {
 		@media @mobile {
 			font-size: bkscale(@font-swatch10-font-size,0.9);
@@ -60,50 +20,42 @@
 	text-decoration: none;
 }
 
-
-
 // Logo
-// ----
-
 
 .widget.logo {
 	display: inline-block;
 	margin-right: 10px;
 	vertical-align: middle;
 	z-index: 1000;
+
 	a img {
 		max-height: 50px;
 		width: auto!important;
+
 		@media @mobile {
 			max-height: 40px;
 		}
 	}
 }
 
-
-
-// -----------------------------
-// 3.  #NAVIGATION
-// -----------------------------
-
-
-// Widget Extended Navigation
-// --------------------------
-
+// NAVIGATION
 
 .widget.extendednavigation {
 	text-transform: uppercase;
 	display: inline-block;
 	vertical-align: middle;
 	width: 70%;
+
 	@media @tablet {
 		display: block;
 		width: 100%;
 	}
+
 	ul {
 		margin: 0 auto;
 		padding: 0;
 		display: block;
+
 		li {
 			a {
 				padding: 0 30px;
@@ -112,12 +64,11 @@
 				letter-spacing: .1em;
 				.transition (all, 0.5s, ease);
 			}
-			.text {
-			}
+
 			ul {
 				display: block;
 				text-align: center;
-				visibility: hidden; /* hides sub-menu */
+				visibility: hidden;
 				opacity: 0;
 				position: absolute;
 				top: 100%;
@@ -125,18 +76,20 @@
 				padding: 10px;
 				transform: translateZ(0);
 				transform: translateY(10%);
-				transition: all 0.5s ease 0s, visibility 0s linear 0.5s; /* the last value is the transition-delay for visibility */
+				transition: all 0.5s ease 0s, visibility 0s linear 0.5s;
 			}
+
 			&:hover {
 				ul {
 					background-color: darken(@color-swatch1, 5%);
-					visibility: visible; /* shows sub-menu */
+					visibility: visible;
 					opacity: 1;
 					padding: 10px;
 					transform: translateX(0%);
-					transition-delay: 0s; /* this removes the transition delay so the menu will be visible while the other styles transition */
+					transition-delay: 0s;
 				}
 			}
+
 			&.folder {
 				.text {
 					letter-spacing: .1em;
@@ -146,6 +99,7 @@
 					margin: 0;
 					text-transform: uppercase;
 				}
+
 				&:after {
 					right: 10px;
 					top: 22px;
@@ -220,15 +174,7 @@
 	}
 }
 
-
-
-
-
-
-// -----------------------------
-// 4.  #FEATURE
-// -----------------------------
-
+// FEATURE
 
 .bk-section {
 	background-color: transparent;
@@ -240,6 +186,7 @@
 
 .widget.feature {
 	border-bottom: 1px solid @spare-color;
+
 	.feature-bgimg {
 		height: 100% !important;
 		height: 100vh !important;
@@ -248,17 +195,21 @@
 			.spare {
 				margin: 0 40px;
 				letter-spacing: .1em;
+
 				h2 {
 					text-transform: uppercase;
 					padding-bottom: 0;
 				}
+
 				h3 {
 					color: fade(@font-swatch9-color, 75%);
 					font-style: italic;
 					text-transform: initial;
 				}
+
 				.feature-btn {
 					display: block;
+					
 					button {
 						padding: 10px 30px 7px;
 						text-decoration: none;
@@ -419,17 +370,17 @@
 
 
 
-// -----------------------------
-// 6.  #GALLERY
-// -----------------------------
+// GALLERY
 
 
 .widget.gallery {
 	margin-bottom: 2em;
+
 	.gallery-widget {
 		position: relative;
 		width: 100%;
 		padding: 0;
+
 		li {
 			width: 25%;
 			padding-bottom: 25%;
@@ -437,19 +388,23 @@
 				width: 33.3%;
 				padding-bottom: 33.3%;
 			}
+
 			@media @tablet {
 				width: 50%;
 				padding-bottom: 50%;
 			}
+
 			@media @mobile {
 				width: 100% !important;
 				padding-bottom: 100% !important;
 			}
+
 			.inner {
 				left: 10px;
 				right: 10px;
 				top: 10px;
 				bottom: 10px;
+
 				.title {
 					margin-top: 30%;
 					color: @spare-color;
@@ -457,6 +412,7 @@
 					font-weight: 700;
 					text-transform: uppercase;
 				}
+
 				.description {
 					color: @spare-color;
 					font-size: 13px;
@@ -464,6 +420,7 @@
 			}
 		}
 	}
+
 	.image-data {
 		background: fade(@color-swatch3, 85%);
 		display: block;
@@ -487,6 +444,7 @@
 		text-align: center;
 		padding: 20px;
 	}
+
 	.inner:hover .image-data {
 		-webkit-transform: scale(1);
 		-moz-transform: scale(1);
@@ -498,37 +456,33 @@
 	}
 }
 
-
-
-
-// -----------------------------
-// 7.  #SLIDESHOW
-// -----------------------------
-
+// SLIDESHOW
 
 .widget.responsiveslideshow {
 	.slideshow-widget {
-		.slideshow-image-list {
-		}
 		.btn-prev,
 		.btn-next {
 			width: 32px;
 			height: 32px;
 			text-indent: -99999px;
+
 			&:hover {
 				opacity: 0.7;
 			}
 		}
+
 		.btn-prev {
 			left: 10px;
 			background: image('/images/slideshow-arrow-left.svg') no-repeat center left;
 			background-size: contain;
 		}
+
 		.btn-next {
 			right: 10px;
 			background: image('/images/slideshow-arrow-right.svg') no-repeat center left;
 			background-size: contain;
 		}
+
 		.btn-play {
 			width: 64px;
 			height: 64px;
@@ -538,31 +492,40 @@
 			left: 50%;
 			transform: translate(-50%, -50%);
 			text-indent: -99999px;
+
 			&:after {
 				display: none;
 			}
 		}
+
 		&:hover .pause {
 			background: image('/images/slideshow-pause.svg') no-repeat center;
 			background-size: cover;
 		}
 	}
+
 	.content-wrapper {
 		background-color: @contrast-color;
 	}
-	.title, .description {
+
+	.title,
+	.description {
 		padding: 10px;
 	}
+
 	.title {
 		color: @font-swatch4-color;
 		font-family: @font-swatch4-font-family;
 		text-transform: uppercase;
 	}
+
 	.description {
 		color: @font-swatch5-color;
 	}
+
 	.slideshow-widget-controls {
 		margin: 10px 0;
+
 		.dot {
 			background-color: transparent;
 			border: 1px solid @contrast-color;

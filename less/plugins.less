@@ -1,28 +1,11 @@
-// --------------------------------------
-// BaseKit Standard Theme: LESS > Plugins
-// --------------------------------------
+// Plugins
 
-
-
-// -----------------------------
-// #Table of Contents
-// -----------------------------
-
-
-//  1.   #BLOG
-//  2.   #MENU
-//  3.   #E-COMMERCE
-
-
-
-// -----------------------------
-// 1. #BLOG
-// -----------------------------
-
+// BLOG
 
 .blog-post-list {
 	.blog-post-item {
 		margin-bottom: 2em;
+
 		.blog-post-title,
 		.blog-post-summary,
 		.blog-post-more-link,
@@ -30,14 +13,17 @@
 			margin-bottom: 15px;
 			padding: 0;
 		}
+
 		.blog-post-title a {
 			color: @font-swatch1-color;
 			padding-bottom: 2em;
 			text-decoration: none;
+
 			&:hover {
 				color: @button-color;
 			}
 		}
+
 		.blog-post-more-link a {
 			font-family: @font-swatch7-font-family;
 			font-size: @font-swatch7-font-size;
@@ -48,6 +34,7 @@
 			text-decoration: none;
 			padding: 10px 30px 7px;
 			.transition (all, 0.5s, ease);
+
 			&:hover {
 				color: @font-swatch7-color;
 				background-color: @font-swatch7-background-color-hover;
@@ -55,10 +42,12 @@
 				cursor: pointer;
 			}
 		}
+
 		.blog-post-more-link,
 		.blog-post-date {
 			display: inline-block;
 		}
+
 		.blog-post-date {
 			font-style: italic;
 			color: @font-swatch5-color;
@@ -68,12 +57,14 @@
 	}
 }
 
-.blog-post-tags li a, .blog-post-category a {
+.blog-post-tags li a,
+.blog-post-category a {
 	border: 1px solid @contrast-color;
 	padding: 1px 12px 2px;
 	display: inline-block;
 	margin-bottom: 5px;
 	line-height: 20px;
+
 	&:hover {
 		text-decoration: none;
 		color: darken(@color-swatch3, 15%);
@@ -92,18 +83,17 @@
 	background-size: cover;
 	background-position: center;
 	margin-bottom: 30px;
+
 	img {
 		display: none;
 	}
 }
 
-
 // Blog Search
-// -----------
-
 
 .widget.blogsearch {
 	margin-bottom: 2em;
+
 	input {
 		height: 40px;
 		width: 100%;
@@ -112,6 +102,7 @@
 		-moz-appearance: none;
 		-webkit-appearance: none;
 	}
+
 	button {
 		position: absolute;
 		bottom: 0;
@@ -119,23 +110,19 @@
 	}
 }
 
-
-
-
-// -----------------------------
-// 2. #MENU
-// -----------------------------
-
-
+// MENU
 
 .widget.menusections {
 	text-align: center;
+
 	ul {
 		padding: 2em 0;
+
 		li {
 			a {
 				border: 1px solid @contrast-color;
 				padding: 6px 20px;
+
 				&:hover {
 					text-decoration: none;
 					color: darken(@color-swatch3, 15%);
@@ -151,25 +138,31 @@
 		text-align: center;
 		margin-bottom: 2em;
 	}
+
 	.menu-items {
 		li {
 			padding: 2em 0;
+
+			&.menu-item-promoted {
+				padding: 30px;
+				border: 1px solid @contrast-color;
+			}
 		}
-		li.menu-item-promoted {
-			padding: 30px;
-			border: 1px solid @contrast-color;
-		}
+
 		.menu-item-price p {
 			color: @font-swatch4-color;
 			font-family: @font-swatch4-font-family;
 			font-size: @font-swatch4-font-size;
 		}
+
 		h4.menu-item-nutritional-title {
 			font-size: @font-swatch5-font-size;
 		}
+
 		.menu-section-item-dietary-props {
 			margin-top: 10px;
 		}
+
 		.dietary-icon {
 			padding: 2px 10px;
 			color: @button-color;
@@ -179,6 +172,7 @@
 			text-transform: uppercase;
 		}
 	}
+
 	.menu-item-image-wrap {
 		width: 100%;
 		background-repeat: no-repeat;
@@ -186,71 +180,79 @@
 	    background-position: center;
 		height: 200px;
 		margin-bottom: 20px;
+
 		.menu-item-image {
 			display: none;
 		}
 	}
+
 	.menu-subsection {
 		padding: 30px;
 		border: 1px solid @contrast-color;
+
 		.menu-subsection-header {
 			text-align: center;
 		}
 	}
 }
 
-
-
-// -----------------------------
-// 3. #E-COMMERCE
-// -----------------------------
-
-
-// Products List
-// -------------
+// E-COMMERCE
 
 .widget.ecomproductslist {
 	width: 103.333%;
 	max-width: none;
 	margin-left: 0;
+
 	.productlist-filter {
 	    margin-right: 3.333%;
 	    margin-left: 0;
+
 		.productlist-display-form {
 			text-align: right;
+
 			.form-group {
 				width: 100%;
 				margin: 0;
 			}
+
 			label {
 				text-align: left;
 				width: 19%;
 			}
+
 			select, input {
 				width: 80%;
 			}
+
 			input {
 				margin: 0;
 				padding-right: 130px;
 			}
+
 			.productlist-search {
 				position: relative;
+
 				button {
 					position: absolute;
 					right: 0;
 					bottom: 0;
 				}
 			}
-			label, select, input {
+
+			label,
+			select,
+			input {
 				@media @mobile {
 					width: 100%;
 				}
 			}
 		}
+
 		.productlist-item-count {
 			padding-top: 10px;
 		}
 	}
+
 	.ecom-productslist-product {
 		display: inline-block;
 		width: 30%;
@@ -260,48 +262,53 @@
 		padding: 0;
 		vertical-align: top;
 		overflow: visible;
+
 		@media @tablet {
 			width: 45%;
 			margin-right: 4%;
 		}
+
 		@media @mobile {
 			width: 97%;
 			margin-right: 0;
 		}
 	}
+
 	span.ecom-productlist-price {
 		border: 1px solid @contrast-color;
 		padding: 3px 10px 4px;
 	}
+
 	.ecom-productlist-info {
 		margin-top: 20px;
 		text-align: center;
 	}
+
 	.productlist-pagination {
 		margin-left: 0;
 		margin-right: 3%;
 		margin-top: 20px;
 		margin-bottom: 20px;
 		text-align: center;
+
 		.productlist-pagination-pages .productlist-pagination-page {
 			padding: 0 10px;
 		}
 	}
 }
 
-
 // Product Detail
-// --------------
-
 
 .widget.ecomproduct {
 	margin-bottom: 3em;
+
 	.ecom-product {
 		.ecom-product-images-container {
 			@media @tablet {
 				width: 100%;
 			}
 		}
+
 		.ecom-product-info,
 		.ecom-product-long-description {
 			@media only screen and (max-width: 980px) {
@@ -312,43 +319,53 @@
 				margin-bottom: 2em;
 			}
 		}
+
 		p.ecom-product-price {
 			font-size: @font-swatch4-font-size;
 		}
+
 		.ecom-product-variation {
 			margin-bottom: 1em;
+
 			select {
 				appearance: none !important;
 				-moz-appearance: none !important;
 				-webkit-appearance: none !important;
 			}
 		}
+
 		.ecom-product-add-to-cart-btn-wrapper,
 		.ecom-product-go-to-checkout-btn-wrapper {
 			display: inline-block;
 			vertical-align: middle;
 		}
+
 		.ecom-product-add-to-cart-btn-wrapper {
 			width: 65%;
 			float: left;
 			padding-right: 2em;
+
 			@media @mobile {
 				width: 100%;
 				float: none;
 				padding-right: 0;
 				margin-bottom: 1em;
 			}
+
 			.ecom-product-add-to-cart-btn span {
 				position: relative;
 			}
 		}
+
 		.ecom-product-go-to-checkout-btn-wrapper {
 			width: 35%;
 			text-align: center;
+
 			@media @mobile {
 				width: 100%;
 			}
 		}
+
 		.ecom-product-add-to-cart-btn,
 		.ecom-product-go-to-checkout-btn-wrapper a {
 			display: table-cell;
@@ -357,19 +374,23 @@
 			height: 52px;
 			line-height: 30px;
 		}
+
 		.ecom-product-go-to-checkout-btn-wrapper a {
 			display: block;
 			padding: 12px;
 		}
+
 		.ecom-product-cattag {
 			margin: 1.5em 0 0;
 			line-height: 36px;
 		}
+
 		a.ecom-product-tag-link,
 		a.store-category-link {
 			border: 1px solid @contrast-color;
 			padding: 3px 13px 4px;
 			text-decoration: none;
+
 			&:hover {
 				border-color: darken(@color-swatch2, 15%);
 				color: darken(@color-swatch3, 15%);
@@ -403,17 +424,16 @@
 	}
 }
 
-
-
-// Basket 
-// ------
+// Basket
 
 .widget.ecombasket {
 	margin-bottom: 2em;
+
 	.ecombasket-pull {
 		width: auto;
 		max-width: 200px;
 		height: 52px;
+
 		p {
 			font-family: @font-swatch7-font-family;
 			font-size: @font-swatch7-font-size;
@@ -421,13 +441,16 @@
 			position: relative;
 		}
 	}
+
 	.ecombasket-list-container {
 		ul {
 			li {
 				border-bottom: 1px solid @contrast-color;
+
 				.ecombasket-item-image {
 					width: 85px;
 				}
+
 				.ecombasket-item-info {
 					.ecombasket-item-title {
 						font-family: @font-swatch4-font-family;
@@ -435,6 +458,7 @@
 						text-transform: uppercase;
 						letter-spacing: .1em;
 					}
+
 					.ecombasket-remove-button {
 						line-height: 10px;
 						padding: 10px 20px;
@@ -460,10 +484,3 @@
 .ecombasket-summary-link {
 	display: inline-block;
 }
-
-
-
-
-
-
-
