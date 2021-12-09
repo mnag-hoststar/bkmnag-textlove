@@ -542,18 +542,7 @@
 	}
 }
 
-
-
-
-
-// -----------------------------
-// 8. #BUTTONS
-// -----------------------------
-
-
-// 8.1 Standard
-// ------------
-
+// BUTTONS
 
 .widget.button button, .btn,
 button.btn,
@@ -581,6 +570,7 @@ button.btn,
 	letter-spacing: .1em;
 	border: none;
 	.transition (all, 0.5s, ease);
+
 	&:hover {
 		background-color: @font-swatch7-background-color-hover;
 		cursor: pointer;
@@ -588,10 +578,7 @@ button.btn,
 	}
 }
 
-
-// 8.2 Tweet
-// ---------
-
+// Tweet
 
 .widget.tweet a {
 	padding-left: 58px;
@@ -600,15 +587,13 @@ button.btn,
 	background-repeat: no-repeat;
 	background-position: 20px center;
 	display: inline-block;
+
 	&:hover {
 		background-image: image('/images/social/socialicons-twitter.svg');
 	}
 }
 
-
-// 8.3 Dropbox
-// -----------
-
+// Dropbox
 
 .widget.dropbox button {
 	margin: 0;
@@ -617,14 +602,13 @@ button.btn,
 	background-size: 30px;
 	background-repeat: no-repeat;
 	background-position: 20px center;
+
 	&:hover {
 		background-image: image('/images/dropbox-icon.svg');
 	}
 }
 
-// 8.4 Click to call
-// -----------------
-
+// Click to call
 
 .widget.clicktocall {
 	padding: 8px 0;
@@ -684,22 +668,15 @@ button.btn,
 	cursor: pointer;
 }
 
-
-
 .ecom-product-go-to-checkout-btn,
 .ecom-product .btn {
 	padding: 10px 22px 10px 22px;
 }
 
+// CONTACT FORM
 
-
-
-// -----------------------------
-// 9.  #CONTACT FORM
-// -----------------------------
-
-
-.contactform, .advancedcontactform {
+.contactform,
+.advancedcontactform {
 	label {
 		font-family: @font-swatch5-font-family;
 		font-size: @font-swatch5-font-size;
@@ -710,21 +687,17 @@ button.btn,
 		margin-bottom: .4em;
 		padding: 0;
 	}
+
 	button {
 		float: right;
 	}
 }
 
-
-
-
-// -------------------------------
-// 10.  #SIGNUP FORM
-// -------------------------------
-
+// SIGNUP FORM
 
 .widget.signupform {
 	margin-bottom: 20px;
+
 	fieldset {
 		label {
 			font-family:@font-swatch5-font-family;
@@ -734,11 +707,13 @@ button.btn,
 			color: @font-swatch5-color;
 			letter-spacing: @font-swatch5-letter-spacing;
 		}
+
 		input {
 			height: 40px;
 			width: 100%;
 			margin-bottom: 0;
 		}
+
 		button {
 			position: absolute;
 			bottom: 0;
@@ -747,18 +722,13 @@ button.btn,
 	}
 }
 
-
-
-
-// -----------------------------
-// 11.  #SOCIAL ICONS
-// -----------------------------
-
+// SOCIAL ICONS
 
 .widget.socialicons,
 .widget.profile .bk-profile-socialicons {
 	span {
 		display: inline-block;
+
 		a {
 			background-size: 32px;
 			background-color: @font-swatch7-background-color;
@@ -768,10 +738,12 @@ button.btn,
 			height: 36px;
 			.border-radius(50%);
 			.transition (all, 0.5s, ease);
+
 			&:hover {
 				background-color: @font-swatch7-background-color-hover;
 				.transition (all, 0.5s, ease);
 			}
+
 			@media @mobile {
 				margin: 0 2px;
 			}
@@ -905,15 +877,11 @@ button.btn,
 }
 
 */
-
-
-// -----------------------------
-// 12. #TWITER FEED
-// -----------------------------
-
+// TWITER FEED
 
 .widget.twitter {
 	margin-bottom: 2em;
+
 	ul {
 		li {
 			padding: 30px;
@@ -921,29 +889,37 @@ button.btn,
 			border: 1px solid @contrast-color;
 		}
 	}
+
 	.twitter-profile-pic {
 		max-width: 80px;
 		@media @mobile {
 			display: none;
 		}
 	}
+
 	.twitter-content {
 		p {
 			padding: 0;
+
 			a {
 				font-size: @font-swatch5-font-size;
 			}
 		}
-		time, span, span a {
+
+		time,
+		span,
+		span a {
 			font-family: @font-swatch5-font-family;
 			font-size: bkscale(@font-swatch5-font-size,0.9);
 		}
+
 		span.bk-full-name {
 			font-family: @font-swatch4-font-family;
 			color: @font-swatch4-color;
 			font-size: @font-swatch5-font-size;
 			text-transform: uppercase;
 		}
+
 		span a {
 			color: @color-swatch3;
 			text-decoration: none;
@@ -951,12 +927,7 @@ button.btn,
 	}
 }
 
-
-
-// -----------------------------
-// 13. #DIVIDER - LINE WIDGET
-// -----------------------------
-
+// DIVIDER - LINE WIDGET
 
 .widget.line {
 	padding: 20px 0;
@@ -967,13 +938,7 @@ hr.line {
 	margin: 1em 0;
 }
 
-
-
-// -----------------------------
-// 14. #PROFILE
-// -----------------------------
-
-
+// PROFILE
 
 .widget.profile {
 	form {
@@ -992,21 +957,9 @@ hr.line {
 	}
 }
 
-
-
-
-// -----------------------------
-// 15. #MAP
-// -----------------------------
-
+// MAP
 
 .widget.map {
 	border: 1px solid @contrast-color;
 	margin-bottom: 2em;
 }
-
-
-
-
-
-
