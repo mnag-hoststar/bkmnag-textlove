@@ -605,7 +605,8 @@ select,
 	}
 }
 
-input, select {
+input,
+select {
 	height: 40px;
 }
 
@@ -624,9 +625,15 @@ select {
 	border-radius: 0;
 	background: image('/images/arrow-small-down.svg') no-repeat 98% center;
 	background-size: 24px;
+
+	option {
+		background-color: @color-swatch1;
+		color: @font-swatch5-color;
+	}
 }
 
-.contactform .option-list, .advancedcontactform .option-list {
+.contactform .option-list,
+.advancedcontactform .option-list {
 	margin-bottom: 1em;
 }
 
