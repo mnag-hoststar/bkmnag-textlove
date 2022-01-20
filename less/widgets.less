@@ -372,20 +372,25 @@
 		padding: 0;
 
 		li {
-			width: 25%;
-			padding-bottom: 25%;
+			width: 100%/4;
+			padding-bottom: 100%/4;
 
 			@media @desktop-small {
-				width: 33.3%;
-				padding-bottom: 33.3%;
+				width: 100%/3;
+				padding-bottom: 100%/3;
 			}
 
 			@media @tablet {
-				width: 50%;
-				padding-bottom: 50%;
+				width: 100%/2;
+				padding-bottom: 100%/2;
 			}
 
 			@media @mobile {
+				width: 100% !important;
+				padding-bottom: 100% !important;
+			}
+
+			.responsivecolumns & {
 				width: 100% !important;
 				padding-bottom: 100% !important;
 			}
