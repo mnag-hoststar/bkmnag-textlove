@@ -180,6 +180,21 @@ blockquote {
 	color: @button-color;
 	font-size: @font-swatch4-font-size;
 
+	.style--light & {
+		border-color: @color--accent;
+		color: @contrast--light;
+	}
+
+	.style--accent & {
+		border-color: @contrast--accent;
+		color: @contrast--accent;
+	}
+
+	.style--dark & {
+		border-color: @color--accent;
+		color: @contrast--dark;
+	}
+
 	&:before {
 		display: none;
 	}
