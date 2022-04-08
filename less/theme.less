@@ -2,7 +2,7 @@
 
 // Colour Variables
 
-@bg-color: @color-swatch1; 
+@bg-color: @color-swatch7; 
 @contrast-color: @color-swatch2;
 @button-color: @color-swatch3;
 @heading-color: @color-swatch4;
@@ -96,6 +96,12 @@ h5 {
 
 // Normal Text
 
+h1, h2, h3, h4, h5,
+p, span, small, pre, code,
+table, th, td, label, .btn, button {
+	word-break: break-word;
+}
+
 .widget.content .wysihtml-editor-content,
 .widget.embed .embed-content,
 .widget.content.in-editing .wysihtml-editor-content {
@@ -128,12 +134,12 @@ pre, code {
 	padding: 0.5em 1em;
 	border: none;
 	.border-radius(0);
-	background-color: darken(@color-swatch1, 10%);
+	background-color: darken(@color-swatch1, 5%);
 	overflow: auto;
 	font-family: monospace;
 
 	.style--light & {
-		background-color: darken(@color-swatch1, 10%);
+		background-color: darken(@color-swatch1, 5%);
 	}
 
 	.style--accent & {
@@ -172,11 +178,12 @@ a {
 // BLOCKQUOTE
 
 blockquote {
+	background-color: @color-swatch7;
 	border: 1px solid @contrast-color;
 	padding: 30px;
 	font-style: italic;
-	color: @button-color;
 	font-size: @font-swatch4-font-size;
+	color: @button-color;
 
 	.style--light & {
 		border-color: @contrast-color;
@@ -255,8 +262,7 @@ blockquote {
 
 table {
 	overflow: auto;
-	width: 100%;
-	max-width: 100%;
+	min-width: 100%;
 	border: none;
 	border-collapse: separate;
 	border-spacing: 0;
@@ -348,12 +354,16 @@ td {
 		display: block;
 		padding: 0 0.5em;
 		border-bottom: none;
+		width: 100% !important;
+		max-width: 100%;
 	}
 	
 	.responsivecolumns & {
 		display: block;
 		padding: 0 0.5em;
 		border-bottom: none;
+		width: 100% !important;
+		max-width: 100%;
 	}
 	
 	&:first-child {
@@ -505,6 +515,7 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 
 	.main {
 		padding: 60px 0;
+	
 		@media @tablet {
 			padding: 40px 0;
 		}
@@ -570,17 +581,18 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 
 input,
 textarea,
-select,
-.widget.profile form fieldset input {
-	background: @bg-color;
-	text-indent: 10px;
-	padding: 8px;
-	border: 1px solid @contrast-color;
+select {
 	margin-bottom: 1em;
+	padding: 8px;
+	background: @color-swatch7;
+	border: 1px solid @contrast-color;
+	min-height: 45px;
+	text-indent: 10px;
 	.transition (all, 0.5s, ease);
 	appearance: none;
 	-moz-appearance: none;
 	-webkit-appearance: none;
+
 	&:focus,
 	&:hover {
 		.transition (all, 0.5s, ease);
@@ -588,19 +600,8 @@ select,
 	}
 }
 
-input,
-select {
-	height: 40px;
-}
-
 textarea {
-	height: 104px;
-}
-
-label {
-	display: inline-block;
-	padding-bottom: .4em;
-    word-break: break-word;
+	min-height: 150px;
 }
 
 // Dropdown
@@ -624,6 +625,7 @@ label {
 select {
 	cursor: pointer;
 	position: relative;
+	padding-right: 2.6em;
 	border-radius: 0;
 	background-image: url("data:image/svg+xml;base64,CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDI0IDI0IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNCAyNCI+Cgk8cG9seWxpbmUgc3Ryb2tlPSIjNzY3ODgwIiBmaWxsPSJub25lIiBzdHJva2Utd2lkdGg9IjMiIHBvaW50cz0iMjAuMSw4LjYgMTIsMTYuNyAzLjksOC42IiAvPgo8L3N2Zz4=");
     background-repeat: no-repeat;
@@ -639,64 +641,6 @@ select {
 .contactform .option-list,
 .advancedcontactform .option-list {
 	margin-bottom: 1em;
-}
-
-// E-COMMERCE
-
-// Basket Summary
-
-.basket-summary-items-table {
-	border-collapse: collapse;
-	width: 100%;
-
-	.image-wrap {
-		background-position: 10000px;
-		line-height: 0;
-		text-align: center;
-		padding: 30px;
-
-		img {
-			max-width: 100%;
-			max-height: 200px;
-		}
-	}
-
-	td {
-		padding: 10px 0;
-	}
-
-	tr {
-		border-bottom: solid 1px darken(@color-swatch1, 10%);
-
-		&:last-of-type {
-			border-bottom: none;
-		}
-	}
-
-	.basket-summary-subtotal {
-		padding: 20px;
-	}
-}
-
-.basket-summary-amount,
-.basket-summary-subtotal {
-	text-align: center;
-}
-
-.basket-summary-quantitybtn {
-	button.btn {
-		padding: 7px 18px;
-	}
-}
-
-.basket-summary-items-column {
-	width: 30%;
-}
-
-.quantity-number {
-	display: inline-block;
-	min-width: 40px;
-	text-align: center;
 }
 
 // Clearfix
