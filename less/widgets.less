@@ -394,8 +394,32 @@
 		margin: 10px 0 0;
 		color: @heading-color;
 
+		.style--light & {
+			color: @contrast--light;
+		}
+
+		.style--accent & {
+			color: @contrast--accent;
+		}
+
+		.style--dark & {
+			color: @contrast--dark;
+		}
+
 		&:hover {
 			color: lighten(@color-swatch4, 20%);
+		}
+
+		.style--light & {
+			color: lighten(@contrast--light, 20%);
+		}
+
+		.style--accent & {
+			color: lighten(@contrast--accent, 20%);
+		}
+
+		.style--dark & {
+			color: lighten(@contrast--dark, 20%);
 		}
 	}
 
@@ -403,8 +427,32 @@
 		margin: 0 0 10px;
 		color: @paragraph-color;
 
+		.style--light & {
+			color: fade(@contrast--light, 90%);
+		}
+
+		.style--accent & {
+			color: fade(@contrast--accent, 90%);
+		}
+
+		.style--dark & {
+			color: fade(@contrast--dark, 90%);
+		}
+
 		&:hover {
 			color: lighten(@color-swatch5, 20%);
+
+			.style--light & {
+				color: lighten(@contrast--light, 80%);
+			}
+
+			.style--accent & {
+				color: lighten(@contrast--accent, 80%);
+			}
+
+			.style--dark & {
+				color: lighten(@contrast--dark, 80%);
+		}
 		}
 	}
 }
@@ -634,10 +682,34 @@
 			height: 12px;
 			margin: 0 4px;
 			cursor: pointer;
+
+			.style--light & {
+			    border-color: fade(@color--accent, 90%);
+			}
+
+			.style--accent & {
+			    border-color: fade(@contrast--accent, 90%);
+			}
+
+			.style--dark & {
+			    border-color: fade(@color--accent, 90%);
+			}
 		
 			&.selected {
 				background-color: @button-color;
 				border: none;
+
+				.style--light & {
+				    background-color: @color--accent
+				}
+
+				.style--accent & {
+				    background-color: @contrast--accent
+				}
+
+				.style--dark & {
+				    background-color: @color--accent;
+				}
 			}
 		}
 	}
@@ -665,7 +737,8 @@ button.button,
 .userregistration fieldset .userregistrationbtn,
 .widget.yelpreview .review-body .review-link a,
 form.blog-search-form .form-group button,
-.blog-post-more-link a {
+.blog-post-more-link a,
+.contentgroup__link {
 	display: inline-block;
 	float: none;
 	font-family: @font-swatch7-font-family;
@@ -682,11 +755,41 @@ form.blog-search-form .form-group button,
 	min-height: 45px;
 	text-align: center;
 
+	.style--light & {
+	    background-color: @color--accent;
+	    color: @contrast--accent;
+	}
+
+	.style--accent & {
+	    background-color: @color--dark;
+	    color: @contrast--dark;
+	}
+
+	.style--dark & {
+	    background-color: @color--accent;
+	    color: @contrast--accent;
+	}
+
 	&:hover {
 		background-color: @font-swatch7-background-color-hover;
 		cursor: pointer;
 		.transition (all, 0.5s, ease);
 		text-decoration: none;
+
+		.style--light & {
+		    background-color: @color--dark;
+		    color: @contrast--dark;
+		}
+
+		.style--accent & {
+		    background-color: @color--light;
+		    color: @contrast--light;
+		}
+
+		.style--dark & {
+		    background-color: @color--light;
+		    color: @contrast--light;
+		}
 	}
 	
 	@media @mobile {
@@ -699,7 +802,7 @@ form.blog-search-form .form-group button,
 	color: @font-swatch7-color;
 
 	.style--light & {
-		color: @font-swatch7-color;
+		color: @contrast--accent;
 	}
 
 	.style--accent & {
@@ -807,6 +910,18 @@ label, .label,
 	line-height: @font-swatch5-line-height;
 	color: @font-swatch5-color;
 	letter-spacing: @font-swatch5-letter-spacing;
+
+	.style--light & {
+	    color: fade(@contrast--light, 90%);
+	}
+
+	.style--accent & {
+	    color: fade(@contrast--accent, 90%);
+	}
+
+	.style--dark & {
+	    color: fade(@contrast--dark, 90%);
+	}
 }
 
 // Radiobuttons and Checkboxes
@@ -883,6 +998,21 @@ label, .label,
 			background-color: @color-swatch7;
 			border: 1px solid @font-swatch7-background-color;
 			border-radius: 0;
+
+			.style--light & {
+				background-color: @color--light;
+			    border-color: @color--accent;
+			}
+
+			.style--accent & {
+				background-color: @color--light;
+			    border-color: @color--dark;
+			}
+
+			.style--dark & {
+				background-color: @color--light;
+			    border-color: @color--accent;
+			}
 		}
 
 		&:after {
@@ -890,6 +1020,21 @@ label, .label,
 			width: floor(@font-swatch5-line-height*0.8);
 			background-color: @font-swatch7-background-color;
 			border: 1px solid @font-swatch7-background-color;
+
+			.style--light & {
+				background-color: @color--accent;
+			    border-color: @color--accent;
+			}
+
+			.style--accent & {
+				background-color: @color--dark;
+			    border-color: @color--dark;
+			}
+
+			.style--dark & {
+				background-color: @color--accent;
+			    border-color: @color--accent;
+			}
 		}
 	}
 
@@ -915,7 +1060,7 @@ label, .label,
 			transform: scale(50%) rotate(45deg);
 
 			.style--light & {
-				box-shadow: -6px -6px 0 0 inset @font-swatch7-background-color;
+				box-shadow: -6px -6px 0 0 inset @color--accent;
 			}
 
 			.style--accent & {
@@ -1072,6 +1217,21 @@ label, .label,
 			margin-bottom: 1em;
 			border: 1px solid @contrast-color;
 			background-color: @color-swatch7;
+
+			.style--light & {
+				background-color: @color--light;
+			    border-color: fade(@color--accent, 90%);
+			}
+
+			.style--accent & {
+				background-color: @color--accent;
+			    border-color: fade(@color--dark, 90%);
+			}
+
+			.style--dark & {
+				background-color: @color--dark;
+			    border-color: fade(@color--accent, 90%);
+			}
 		}
 	}
 
@@ -1094,6 +1254,18 @@ label, .label,
 			a {
 				font-size: @font-swatch5-font-size;
 				line-height: 1em;
+
+				.style--light & {
+					color: @color--accent;
+				}
+
+				.style--accent & {
+					color: @contrast--accent;
+				}
+
+				.style--dark & {
+					color: @color--accent;
+				}
 			}
 
 			&:last-child {
@@ -1105,7 +1277,19 @@ label, .label,
 		span,
 		span a {
 			font-family: @font-swatch5-font-family;
-			font-size: bkscale(@font-swatch5-font-size,0.9);
+			font-size: bkscale(@font-swatch5-font-size, 0.9);
+
+			.style--light & {
+				color: fade(@contrast--light, 90%);
+			}
+
+			.style--accent & {
+				color: fade(@contrast--accent, 90%);
+			}
+
+			.style--dark & {
+				color: fade(@contrast--dark, 90%);
+			} 
 		}
 
 		span.bk-full-name {
@@ -1113,12 +1297,36 @@ label, .label,
 			color: @font-swatch4-color;
 			font-size: @font-swatch5-font-size;
 			text-transform: uppercase;
+
+			.style--light & {
+				color: @contrast--light;
+			}
+
+			.style--accent & {
+				color: @contrast--accent;
+			}
+
+			.style--dark & {
+				color: @contrast--dark;
+			}
 		}
 
 		span a {
 			color: @color-swatch3;
 			text-decoration: none;
 			line-height: 1em;
+
+			.style--light & {
+				color: @color--accent;
+			}
+
+			.style--accent & {
+				color: @contrast--accent;
+			}
+
+			.style--dark & {
+				color: @color--accent;
+			}
 		}
 	}
 }
@@ -1133,6 +1341,18 @@ hr.line {
 	height: 1px;
 	background-color: @contrast-color;
 	margin: 1em 0;
+
+	.style--light & {
+		background-color: fade(@color--accent, 50%);
+	}
+
+	.style--accent & {
+		background-color: fade(@contrast--accent, 50%);
+	}
+
+	.style--dark & {
+		background-color: fade(@color--accent, 50%);
+	}
 }
 
 // EMBEDS
@@ -1165,4 +1385,16 @@ hr.line {
 .widget.map {
 	border: 1px solid @contrast-color;
 	margin-bottom: 2em;
+
+	.style--light & {
+		border-color: fade(@color--accent, 90%);
+	}
+
+	.style--accent & {
+		border-color: fade(@contrast--accent, 90%);
+	}
+
+	.style--dark & {
+		border-color: fade(@color--accent, 90%);
+	}
 }
