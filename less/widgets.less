@@ -110,7 +110,7 @@
 				}
 	
 				a {
-					padding: 0 30px;
+					padding: 0 15px;
 					margin: 0;
 					text-transform: uppercase;
 					letter-spacing: .1em;
@@ -130,9 +130,9 @@
 					
 					.text {
 						letter-spacing: .1em;
-						.transition (all, 0.5s, ease);
+						.transition(all, 0.5s, ease);
 						display: block;
-						padding: 10px 30px;
+						padding: 10px 30px 10px 15px;
 						margin: 0;
 						text-transform: uppercase;
 			
@@ -143,12 +143,13 @@
 							display: block;
 							position: absolute;
 							top: 50%;
-							right: 0.5em;
+							right: 10px;
+							.transition(all, 0.5s, ease);
 							border: 2px solid fade(@font-swatch6-color, 60%);
 							border-top: transparent;
 							border-left: transparent;
 							transform: rotate(45deg);
-							margin-top: -0.5em;
+							margin-top: -0.7em;
 							width: 0.5em;
 							height: 0.5em;
 						}
@@ -162,6 +163,7 @@
 	
 					> ul,
 					&:hover > ul {
+						z-index: 500;
 						display: block;
 						text-align: center;
 						visibility: hidden;
@@ -174,18 +176,19 @@
 						background-color: darken(@color-swatch1, 5%);
 						transform: translateZ(0);
 						transform: translateY(10%);
-						transition: all 0.5s ease 0s, visibility 0s linear 0.5s;
+						transition: all 0.25s ease 0s, visibility 0s linear 0.5s;
 					    min-width: 300px;
                         max-width: 500px;
 	
 						@media @tablet {
 							display: none;
-							z-index: 500;
+							position: static;
+							max-width: none;
+							min-width: auto;
 							left: 0;
 							padding: 0;
 							margin: 0;
 							width: 100%;
-							position: static;
 						}
 	
 						li {
@@ -395,7 +398,7 @@
 		color: @heading-color;
 
 		.style--light & {
-			color: @contrast--light;
+			color: @heading-color;
 		}
 
 		.style--accent & {
@@ -408,18 +411,18 @@
 
 		&:hover {
 			color: lighten(@color-swatch4, 20%);
-		}
 
-		.style--light & {
-			color: lighten(@contrast--light, 20%);
-		}
-
-		.style--accent & {
-			color: lighten(@contrast--accent, 20%);
-		}
-
-		.style--dark & {
-			color: lighten(@contrast--dark, 20%);
+			.style--light & {
+				color: lighten(@color-swatch4, 20%);
+			}
+	
+			.style--accent & {
+				color: lighten(@contrast--accent, 20%);
+			}
+	
+			.style--dark & {
+				color: lighten(@contrast--dark, 20%);
+			}
 		}
 	}
 
@@ -428,7 +431,7 @@
 		color: @paragraph-color;
 
 		.style--light & {
-			color: fade(@contrast--light, 90%);
+			color: fade(@paragraph-color, 90%);
 		}
 
 		.style--accent & {
@@ -443,7 +446,7 @@
 			color: lighten(@color-swatch5, 20%);
 
 			.style--light & {
-				color: lighten(@contrast--light, 80%);
+				color: lighten(@color-swatch5, 80%);
 			}
 
 			.style--accent & {
@@ -452,7 +455,7 @@
 
 			.style--dark & {
 				color: lighten(@contrast--dark, 80%);
-		}
+			}
 		}
 	}
 }
@@ -464,8 +467,9 @@
 
 	.gallery-widget {
 		position: relative;
-		width: 100%;
+		width: auto;
 		padding: 0;
+		margin: -10px;
 
 		li {
 			width: 100%/4;
@@ -655,14 +659,14 @@
 	}
 
 	.title {
-		padding: 20px 15px;
+		padding: 20px 20px 15px;
 		text-transform: uppercase;
 		font-family: @font-swatch4-font-family;
 		color: @font-swatch4-color;
 	}
 
 	.description {
-		padding: 20px 15px;
+		padding: 20px;
 		color: @font-swatch5-color;
 	}
 
@@ -676,7 +680,7 @@
 
 		.dot {
 			background-color: transparent;
-			border: 1px solid @contrast-color;
+			border: 1px solid @button-color;
 			.border-radius(50%);
 			width: 12px;
 			height: 12px;
@@ -684,15 +688,15 @@
 			cursor: pointer;
 
 			.style--light & {
-			    border-color: fade(@color--accent, 90%);
+			    border-color: @button-color;
 			}
 
 			.style--accent & {
-			    border-color: fade(@contrast--accent, 90%);
+			    border-color: @contrast--accent;
 			}
 
 			.style--dark & {
-			    border-color: fade(@color--accent, 90%);
+			    border-color: @contrast--dark;
 			}
 		
 			&.selected {
@@ -700,15 +704,15 @@
 				border: none;
 
 				.style--light & {
-				    background-color: @color--accent
+				    background-color: @button-color;
 				}
 
 				.style--accent & {
-				    background-color: @contrast--accent
+				    background-color: @contrast--accent;
 				}
 
 				.style--dark & {
-				    background-color: @color--accent;
+				    background-color: @contrast--dark;
 				}
 			}
 		}
@@ -728,6 +732,7 @@ button.button,
 .advancedcontactform fieldset button.btn,
 .widget.tweet a,
 .widget.clicktocall a,
+.widget.clicktocall a:hover,
 .widget.dropbox button,
 .widget.filedownload button.btn,
 .widget.paypalbuynow .widget.button.paypal,
@@ -753,12 +758,12 @@ form.blog-search-form .form-group button,
 	border: none;
 	.transition (all, 0.5s, ease);
 	min-height: 45px;
-	height: auto !important;
+	height: auto;
 	text-align: center;
 
 	.style--light & {
-	    background-color: @color--accent;
-	    color: @contrast--accent;
+		background-color: @font-swatch7-background-color;
+		color: @font-swatch7-color;
 	}
 
 	.style--accent & {
@@ -778,18 +783,15 @@ form.blog-search-form .form-group button,
 		text-decoration: none;
 
 		.style--light & {
-		    background-color: @color--dark;
-		    color: @contrast--dark;
+			background-color: @font-swatch7-background-color-hover;
 		}
 
 		.style--accent & {
-		    background-color: @color--light;
-		    color: @contrast--light;
+			background-color: darken(@color--dark, 5%);
 		}
-
+	
 		.style--dark & {
-		    background-color: @color--light;
-		    color: @contrast--light;
+			background-color: darken(@color--accent, 5%);
 		}
 	}
 	
@@ -866,15 +868,14 @@ form.blog-search-form .form-group button,
 		display: inline-block;
 
 		a {
-			display: flex;
-			justify-content: center;
-			align-items: center;
+			display: inline-block;
 			background-image: none;
 			margin: 0 5px 10px;
 			padding: 0;
 			width: 36px;
 			height: 36px;
 			min-height: 36px;
+			line-height: 36px;
 			.border-radius(50%);
 			text-indent: 0;
 			font-size: 0;
@@ -913,15 +914,15 @@ label, .label,
 	letter-spacing: @font-swatch5-letter-spacing;
 
 	.style--light & {
-	    color: fade(@contrast--light, 90%);
+	    color: @font-swatch5-color;
 	}
 
 	.style--accent & {
-	    color: fade(@contrast--accent, 90%);
+	    color: @contrast--accent;
 	}
 
 	.style--dark & {
-	    color: fade(@contrast--dark, 90%);
+	    color: @contrast--dark;
 	}
 }
 
@@ -1001,30 +1002,39 @@ label, .label,
 			border-radius: 0;
 
 			.style--light & {
-				background-color: @color--light;
-			    border-color: @color--accent;
+				background-color: @color-swatch7;
+			    border-color: @font-swatch7-background-color;
 			}
 
 			.style--accent & {
-				background-color: @color--light;
+				background-color: @contrast--dark;
 			    border-color: @color--dark;
 			}
 
 			.style--dark & {
-				background-color: @color--light;
+				background-color: @contrast--accent;
 			    border-color: @color--accent;
 			}
 		}
+	}
 
+	.label--radio {
+		&:before {
+			.border-radius(50%);
+		}
+		
 		&:after {
 			opacity: 0;
+			.border-radius(50%);
+			transform: scale(50%);
+			height: floor(@font-swatch5-line-height*0.8);
 			width: floor(@font-swatch5-line-height*0.8);
 			background-color: @font-swatch7-background-color;
 			border: 1px solid @font-swatch7-background-color;
 
 			.style--light & {
-				background-color: @color--accent;
-			    border-color: @color--accent;
+				background-color: @font-swatch7-background-color;
+			    border-color: @font-swatch7-background-color;
 			}
 
 			.style--accent & {
@@ -1039,37 +1049,35 @@ label, .label,
 		}
 	}
 
-	.label--radio {
-		&:before {
-			.border-radius(50%);
-		}
-		
-		&:after {
-			.border-radius(50%);
-			height: floor(@font-swatch5-line-height*0.8);
-			transform: scale(50%);
-		}
-	}
-
-	.label--checkbox,
-	label[for*="input--terms"] {
-		&:after {
-			margin-top: floor(@font-swatch5-line-height*-1.2/4);
-			height: floor(@font-swatch5-line-height*1.2);
-			border: 1px solid transparent;
-			box-shadow: -6px -6px 0 0 inset @font-swatch7-background-color;
-			transform: scale(50%) rotate(45deg);
-
-			.style--light & {
-				box-shadow: -6px -6px 0 0 inset @color--accent;
-			}
-
-			.style--accent & {
-				box-shadow: -6px -6px 0 0 inset @color--dark;
-			}
-
-			.style--dark & {
-				box-shadow: -6px -6px 0 0 inset @color--accent;
+	input:checked + {
+		.label--checkbox,
+		label[for*="input--terms"] {
+			&:after {
+				border: 0;
+				content: '\f00c';
+				font-family: 'FontAwesome', sans-serif;
+				color: @font-swatch7-background-color;
+				line-height: floor(@font-swatch5-line-height/2*-1);
+				margin: 0 auto;
+				left: 0.25em;
+				top: 0.5em;
+				margin-top: -8px;
+	
+				.style--light & {
+					color: @font-swatch7-background-color;
+				}
+	
+				.style--accent & {
+					color: @color--dark;
+				}
+	
+				.style--dark & {
+					color: @color--accent;
+				}
+	
+				@media @mobile {
+					left: -32px;
+				}
 			}
 		}
 	}
@@ -1220,18 +1228,18 @@ label, .label,
 			background-color: @color-swatch7;
 
 			.style--light & {
-				background-color: @color--light;
-			    border-color: fade(@color--accent, 90%);
+				background-color: @color-swatch7;
+			    border-color: @contrast-color;
 			}
 
 			.style--accent & {
 				background-color: @color--accent;
-			    border-color: fade(@color--dark, 90%);
+			    border-color: @color--dark;
 			}
 
 			.style--dark & {
 				background-color: @color--dark;
-			    border-color: fade(@color--accent, 90%);
+			    border-color: @color--accent;
 			}
 		}
 	}
@@ -1249,19 +1257,21 @@ label, .label,
 		}
 
 		p {
+			display: block;
 			padding: 0;
 			margin-bottom: 1em;
 
 			a {
 				font-size: @font-swatch5-font-size;
 				line-height: 1em;
+				color: @button-color;
 
 				.style--light & {
-					color: @color--accent;
+					color: @button-color;
 				}
 
 				.style--accent & {
-					color: @contrast--accent;
+					color: @color--dark;
 				}
 
 				.style--dark & {
@@ -1279,18 +1289,19 @@ label, .label,
 		span a {
 			font-family: @font-swatch5-font-family;
 			font-size: bkscale(@font-swatch5-font-size, 0.9);
+			color: @button-color;
 
 			.style--light & {
-				color: fade(@contrast--light, 90%);
+				color: @button-color;
 			}
 
 			.style--accent & {
-				color: fade(@contrast--accent, 90%);
+				color: @color--dark;
 			}
 
 			.style--dark & {
-				color: fade(@contrast--dark, 90%);
-			} 
+				color: @color--accent;
+			}
 		}
 
 		span.bk-full-name {
@@ -1300,7 +1311,7 @@ label, .label,
 			text-transform: uppercase;
 
 			.style--light & {
-				color: @contrast--light;
+				color: @font-swatch4-color;
 			}
 
 			.style--accent & {
@@ -1318,7 +1329,7 @@ label, .label,
 			line-height: 1em;
 
 			.style--light & {
-				color: @color--accent;
+				color: @color-swatch3;
 			}
 
 			.style--accent & {
@@ -1327,6 +1338,84 @@ label, .label,
 
 			.style--dark & {
 				color: @color--accent;
+			}
+		}
+	}
+}
+
+// YELP REVIEW
+
+.widget.yelpreview {
+	ul.yelpreview {
+		li {
+			margin: 0 0 3em;
+
+			dt.rating {
+				padding-top: 0;
+			}
+
+			dd.created,
+			dd.reviewer {
+				color: @font-swatch6-color-hover;
+			
+				.style--light & {
+					color: @font-swatch6-color-hover;
+				}
+			
+				.style--accent & {
+					color: @contrast--accent;
+				}
+			
+				.style--dark & {
+					color: @contrast--dark;
+				}
+			}
+
+			dd.created {
+				margin-top: 1em;
+                color: @color-swatch4;
+
+                .style--light & {
+                    color: @color-swatch4;
+                }
+            
+                .style--accent & {
+                    color: @contrast--accent;
+                }
+            
+                .style--dark & {
+                    color: @contrast--dark;
+                }
+			}
+	
+			dd.reviewer {
+				margin-top: 0.5em;
+				margin-bottom: 1em;
+				font-family: @font-swatch4-font-family;
+				font-size: @font-swatch4-font-size;
+				letter-spacing: @font-swatch4-letter-spacing;
+				line-height: @font-swatch4-line-height;
+                color: @color-swatch4;
+
+                .style--light & {
+                    color: @color-swatch4;
+                }
+            
+                .style--accent & {
+                    color: @contrast--accent;
+                }
+            
+                .style--dark & {
+                    color: @contrast--dark;
+                }
+
+				&:before {
+					content: '- ';
+				}
+			}
+
+			dd.review-link {
+				margin: 1em 0;
 			}
 		}
 	}
@@ -1344,15 +1433,15 @@ hr.line {
 	margin: 1em 0;
 
 	.style--light & {
-		background-color: fade(@color--accent, 50%);
+		background-color: @contrast-color;
 	}
 
 	.style--accent & {
-		background-color: fade(@contrast--accent, 50%);
+		background-color: @contrast--accent;
 	}
 
 	.style--dark & {
-		background-color: fade(@color--accent, 50%);
+		background-color: @color--accent;
 	}
 }
 
@@ -1388,14 +1477,14 @@ hr.line {
 	margin-bottom: 2em;
 
 	.style--light & {
-		border-color: fade(@color--accent, 90%);
+		border-color: @contrast-color;
 	}
 
 	.style--accent & {
-		border-color: fade(@contrast--accent, 90%);
+		border-color: @contrast--accent;
 	}
 
 	.style--dark & {
-		border-color: fade(@color--accent, 90%);
+		border-color: @color--accent;
 	}
 }

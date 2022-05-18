@@ -21,7 +21,7 @@
 				text-decoration: none;
 
 				.style--light & {
-					color: @contrast--light;
+					color: @font-swatch1-color;
 				}
 
 				.style--accent & {
@@ -36,7 +36,7 @@
 					color: @button-color;
 
 					.style--light & {
-						color: @color--accent;
+						color: @button-color;
 					}
 
 					.style--accent & {
@@ -51,16 +51,18 @@
 		}
 
 		.blog-post-summary {
+			color: @font-swatch5-color;
+		
 			.style--light & {
-				color: fade(@contrast--light, 90%);
+				color: @font-swatch5-color;
 			}
-
+		
 			.style--accent & {
-				color: fade(@contrast--accent, 90%);
+				color: @contrast--accent;
 			}
-
+		
 			.style--dark & {
-				color: fade(@contrast--dark, 90%);
+				color: @contrast--dark;
 			}
 		}
 
@@ -69,17 +71,17 @@
 			font-style: italic;
 			text-decoration: none;
 			color: @font-swatch5-color;
-
+		
 			.style--light & {
-				color: fade(@contrast--light, 90%);
+				color: @font-swatch5-color;
 			}
-
+		
 			.style--accent & {
-				color: fade(@contrast--accent, 90%);
+				color: @contrast--accent;
 			}
-
+		
 			.style--dark & {
-				color: fade(@contrast--dark, 90%);
+				color: @contrast--dark;
 			}
 		}
 
@@ -94,16 +96,18 @@
 
 		.blog-post-pagination-page,
 		.blog-post-pagination-page:hover {
+			color: @font-swatch5-color;
+		
 			.style--light & {
-				color: @color--accent;
+				color: @font-swatch5-color;
 			}
-
+		
 			.style--accent & {
 				color: @contrast--accent;
 			}
-
+		
 			.style--dark & {
-				color: @color--accent;
+				color: @contrast--dark;
 			}
 		}
 	}
@@ -111,42 +115,46 @@
 
 .blog-post-tags li a,
 .blog-post-category a {
-	border: 1px solid @contrast-color;
-	padding: 1px 12px 2px;
+	background-color: @font-swatch7-background-color;
+	color: @font-swatch7-color;
+	padding: 2px 13px 4px;
 	display: inline-block;
 	margin-bottom: 5px;
-	line-height: 20px;
+	line-height: 1.2em;
 
 	.style--light & {
-		color: fade(@color--accent, 90%);
+		background-color: @font-swatch7-background-color;
+		color: @font-swatch7-color;
 	}
 
 	.style--accent & {
-		color: fade(@color--dark, 90%);
+	    background-color: @color--dark;
+	    color: @contrast--dark;
 	}
 
 	.style--dark & {
-		color: fade(@color--accent, 90%);
+	    background-color: @color--accent;
+	    color: @contrast--accent;
 	}
 
 	&:hover {
 		text-decoration: none;
-		color: darken(@color-swatch3, 15%);
-		border-color: darken(@color-swatch2, 15%);
-
+		background-color: @font-swatch7-background-color-hover;
+		color: @font-swatch7-color;
+	
 		.style--light & {
-			border-color: darken(@color--accent, 10%);
-			color: darken(@color--accent, 5%);
+			background-color: @font-swatch7-background-color-hover;
+			color: @font-swatch7-color;
 		}
 
 		.style--accent & {
-			border-color: lighten(@color--dark, 10%);
-			color: lighten(@color--dark, 5%);
+			background-color: darken(@color--dark, 5%);
+			color: @contrast--dark;
 		}
-
+	
 		.style--dark & {
-			border-color: darken(@color--accent, 10%);
-			color: darken(@color--accent, 5%);
+			background-color: darken(@color--accent, 5%);
+			color: @contrast--accent;
 		}
 	}
 }
@@ -165,6 +173,45 @@
 
 	img {
 		display: none;
+	}
+}
+
+.blog-post-metadata {
+	border-top: 1px solid fade(@font-swatch5-color, 60%);
+    margin-top: 2em;
+    padding-top: 1em;
+
+	.style--light & {
+		border-top: fade(@font-swatch5-color, 60%);
+	}
+
+	.style--accent & {
+		border-top: fade(@contrast--accent, 60%);
+	}
+
+	.style--dark & {
+		border-top: fade(@contrast--dark, 60%);
+	}
+
+	time {
+		font-size: 1em;
+		display: block;
+		margin: 0 0 1em 0;
+	}
+
+	.blog-post-category-label,
+	.blog-post-tags-label {
+		display: block;
+		font-weight: bold;
+	}
+
+	.blog-post-category,
+	.blog-post-tags-list {
+		display: block;
+	}
+
+	.blog-post-tag {
+		display: inline-block;
 	}
 }
 
@@ -269,11 +316,11 @@
 			.form-group {
 				margin: 0;
 				margin-bottom: 1em;
-				min-width: 100%/3;
+				width: 100%/3;
 				padding: 0 0.5em;
 
 				@media @mobile {
-					min-width: 100%;
+					width: 100%;
 					margin: 0;
 				}
 
@@ -373,17 +420,18 @@
 	height: 250px;
 	background-color: @color-swatch7;
 	background-image: none !important;
+	color: @font-swatch5-color;
 
 	.style--light & {
-		background-color: @color--light;
+		color: @font-swatch5-color;
 	}
 
 	.style--accent & {
-		background-color: @color--accent;
+		color: @contrast--accent;
 	}
 
 	.style--dark & {
-		background-color: @color--dark;
+		color: @contrast--dark;
 	}
 }
 
@@ -407,10 +455,11 @@
 .widget.ecomfeaturedproducts .ecom-featuredproducts-price {
 	border: 1px solid @contrast-color;
 	padding: 3px 10px 4px;
+	color: @font-swatch5-color;
 
 	.style--light & {
 		border-color: fade(@color--accent, 90%);
-		color: @color--accent;
+		color: @font-swatch5-color;
 	}
 
 	.style--accent & {
@@ -444,22 +493,26 @@
 	}
 
 	a {
+		color: @button-color;
+
 		.style--light & {
-			color: fade(@color--accent, 90%);
+			color: @button-color;
 		}
 
 		.style--accent & {
-			color: fade(@color--dark, 90%);
+			color: @color--dark;
 		}
 
 		.style--dark & {
-			color: fade(@color--accent, 90%);
+			color: @color--accent;
 		}
 	}
 
 	span {
+		color: @button-color;
+
 		.style--light & {
-			color: @contrast--light;
+			color: @button-color;
 		}
 
 		.style--accent & {
@@ -489,7 +542,7 @@
 		    padding: 3em;
 
 		    .style--light & {
-				background-color: @color--light;
+				background-color: @color-swatch7;
 			}
 
 			.style--accent & {
@@ -570,39 +623,47 @@
 
 		a.ecom-product-tag-link,
 		a.store-category-link {
-			border: 1px solid @contrast-color;
-			padding: 3px 13px 4px;
-			text-decoration: none;
-
+			background-color: @font-swatch7-background-color;
+			color: @font-swatch7-color;
+			padding: 2px 13px 4px;
+			display: inline-block;
+			margin-bottom: 5px;
+			line-height: 1.2em;
+			
+		
 			.style--light & {
-				border-color: fade(@color--accent, 90%);
+				background-color: @font-swatch7-background-color;
+				color: @font-swatch7-color;
 			}
 		
 			.style--accent & {
-				border-color: fade(@color--dark, 90%);
+				background-color: @color--dark;
+				color: @contrast--dark;
 			}
 		
 			.style--dark & {
-				border-color: fade(@color--accent, 90%);
+				background-color: @color--accent;
+				color: @contrast--accent;
 			}
-
+		
 			&:hover {
-				border-color: darken(@color-swatch2, 15%);
-				color: darken(@color-swatch3, 15%);
-
+				text-decoration: none;
+				background-color: @font-swatch7-background-color-hover;
+				color: @font-swatch7-color;
+			
 				.style--light & {
-					border-color: darken(@color--accent, 10%);
-					color: darken(@color--accent, 5%);
+					background-color: @font-swatch7-background-color-hover;
+					color: @font-swatch7-color;
 				}
-
+		
 				.style--accent & {
-					border-color: lighten(@color--dark, 10%);
-					color: lighten(@color--dark, 5%);
+					background-color: darken(@color--dark, 5%);
+					color: @contrast--dark;
 				}
-
+			
 				.style--dark & {
-					border-color: darken(@color--accent, 10%);
-					color: darken(@color--accent, 5%);
+					background-color: darken(@color--accent, 5%);
+					color: @contrast--accent;
 				}
 			}
 		}
@@ -637,6 +698,10 @@
 .basket-summary-items-table {
 	border-collapse: collapse;
 	width: 100%;
+
+	@media @mobile {
+		margin-bottom: 2em;
+	}
 	
 	td, th {
 		@media @mobile {
@@ -655,6 +720,10 @@
 		line-height: 0;
 		text-align: center;
 		max-width: 120px;
+    	
+		@media @mobile {
+			margin: 0 auto;
+		}
 
 		img {
 			max-width: 120px !important;
@@ -664,6 +733,10 @@
 
 	tr {
 		border-bottom: solid 1px darken(@color-swatch1, 10%);
+    	
+		@media @mobile {
+			text-align: center;
+		}
 
 		&:last-of-type {
 			border-bottom: none;
@@ -684,7 +757,7 @@
 	.basket-summary-subtotal {
 		@media @mobile {
 			padding: 10px 0;
-			text-align: right;
+			text-align: center;
 			border-bottom: none;
 		}
 	}
@@ -704,9 +777,16 @@
 		}
 	}
 
+	.basket-summary-pricepu {
+		display: block;
+		margin-bottom: 1em;
+	}
+
     .basket-summary-quantitybtn {
     	button.btn {
-    		padding: 7px 18px;
+			padding: 7px 18px;
+			max-width: 45px;
+			max-height: 45px;
     	}
     }
     
