@@ -586,6 +586,8 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 
 .bk-header {
 	padding: 30px;
+	display: flex;
+	align-items: center;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -593,22 +595,18 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 	z-index: 9999;
 
 	@media @tablet {
-		display: inline-block;
-		padding: 20px;
+		padding: 20px 90px 20px 20px;
 		background-color: @bg-color;
 		position: relative;
 		width: 100%;
 	}
 
 	.companyheader {
-		display: inline-block;
-		vertical-align: middle;
-		width: 29%;
-
+		display: flex;
+		align-items: center;
+	
 		@media @tablet {
-			display: block;
-			width: 90%;
-			float: left;
+			z-index: 1;
 		}
 	}
 }

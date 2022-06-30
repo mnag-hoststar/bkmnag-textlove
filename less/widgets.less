@@ -5,13 +5,13 @@
 // Company Name
 
 .widget.companyname {
-	display: inline-block;
-	vertical-align: middle;
 	text-transform: uppercase;
+	margin-left: 10px;
 
 	a {
 		@media @mobile {
 			font-size: bkscale(@font-swatch10-font-size,0.9);
+			line-height: bkscale(@font-swatch10-line-height,0.9);
 		}
 	}
 }
@@ -30,6 +30,7 @@
 
 	a img {
 		max-height: 50px;
+		min-width: 40px;
 		width: auto!important;
 
 		@media @mobile {
@@ -49,19 +50,27 @@
 	z-index: 10000;
 
 	@media @tablet {
+		z-index: 0;
+		position: absolute;
+		left: 0;
+		right: 0;
 		display: block;
-		width: 100%;
+		height: 100%;
+		width: auto;
 	}
 
 	// Mobile Menu
 
 	a.pull {
 		@media @tablet {
-			top: 10px;
+			top: 50%;
+			right: 20px;
+			margin-top: -20px;
 		}
 
 		@media @mobile {
-			top: 0;
+			top: 50%;
+			margin-top: -20px;
 		}
 
 		&:after {
@@ -79,15 +88,25 @@
 	// Menu Points
 
 	.extendednavigation {
+		@media @tablet {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			width: 100%;
+			height: 100%;
+		}
+
 		ul {
 			margin: 0 auto;
 			padding: 0;
 			display: block;
 	
 			@media @tablet {
-				width: 100%;
+				position: absolute;
+				top: 100%;
 				display: none;
-				padding: 20px 0 0;
+				background-color: @bg-color;
 			}
 			
 			&.open {
